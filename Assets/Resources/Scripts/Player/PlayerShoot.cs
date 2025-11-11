@@ -14,12 +14,12 @@ public class PlayerShoot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space)) // 스페이스 바 키 입력 감지
+        if (Input.GetKey(KeyCode.Space)) // 스페이스 바 키 입력 감지
         {
             TryShoot(); // 발사 함수 호출
         }
     }
-    void TryShoot()
+    private void TryShoot()
     {
         if (Time.time >= nextShootTime) // 다음 발사 시간 체크
         {

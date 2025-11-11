@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlayerBulletMove : MonoBehaviour
 {
-    public float moveSpeed = 1000;
+    public float moveSpeed = 1000f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
