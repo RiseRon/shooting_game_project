@@ -3,8 +3,8 @@ using UnityEngine;
 public class HyunMooBulletMove : MonoBehaviour
 {
     private Transform PlayerTransform;
-    public float moveSpeed = 200f;
-    private Vector2 direction;
+    public float moveSpeed = 200f; // 이동 속도
+    private Vector2 direction; // 이동 방향
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

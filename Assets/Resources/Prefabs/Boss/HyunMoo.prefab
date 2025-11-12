@@ -14,7 +14,9 @@ GameObject:
   - component: {fileID: 5904017177831635831}
   - component: {fileID: 2843045019011335276}
   - component: {fileID: 798529766241923289}
-  - component: {fileID: 468255037840781085}
+  - component: {fileID: 6262178017802734911}
+  - component: {fileID: 5966128270761917769}
+  - component: {fileID: 5308822537844344433}
   m_Layer: 0
   m_Name: HyunMoo
   m_TagString: Boss
@@ -194,7 +196,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HyunMooShoot
   bulletPrefab: {fileID: 2157975423119532736, guid: bcc4f5dd00e21134881f9e7dfded129b, type: 3}
   cooldownTime: 2
---- !u!114 &468255037840781085
+--- !u!114 &6262178017802734911
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -203,7 +205,35 @@ MonoBehaviour:
   m_GameObject: {fileID: 4790215711472473567}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56a92db2c91e23a449122bf14b370294, type: 3}
+  m_Script: {fileID: 11500000, guid: 4e95bc22f24143d45b0b1bff2a1eb1da, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerAttack
-  bossHPBar: {fileID: 0}
+  m_EditorClassIdentifier: Assembly-CSharp::BossHP
+  maxHP: 200
+--- !u!114 &5966128270761917769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4790215711472473567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b24806f73208a814b8914e1c294e4221, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HyunMooAI
+  bossAttack: {fileID: 798529766241923289}
+  bossPettern: {fileID: 5308822537844344433}
+  bossMove: {fileID: 2843045019011335276}
+--- !u!114 &5308822537844344433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4790215711472473567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62d1d3c673aafb2469b3df7bf0f0187d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HyunMooPattern
+  petternBullet: {fileID: 1527929122789266846, guid: c077a60cc26113f41b53478a037306e6, type: 3}

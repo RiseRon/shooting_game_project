@@ -8,7 +8,7 @@ public class BossMove : MonoBehaviour
     private string bossSelect; // 씬 이름(스테이지) 확인 용도
     private float moveSpeed; // 이동 스피드
     private float moveRange; // 이동 범위
-    private int direction = 1; // 이동 방향
+    private int direction = 1;// 이동 방향
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -36,13 +36,13 @@ public class BossMove : MonoBehaviour
     {
         if (transform.position.y >= moveRange) // 위쪽 이동 범위를 넘었는지 체크
         {
-            direction = -1; // 방향을 아래로 전환
+            direction = -1; // 아래쪽 방향으로 전환
         }
         else if (transform.position.y <= -moveRange) // 아래쪽 이동 범위를 넘었는지 체크
         {
-            direction = 1; // 방향을 위로 전환
+            direction = 1; // 위쪽 방향으로 전환
         }
-        transform.position += Vector3.up * moveSpeed * direction * Time.deltaTime;
+        transform.position = new Vector2(transform.position.x, transform.position.y + (direction * moveSpeed * Time.deltaTime));
     }
     // 스테이지에 따른 초기화
     private void Stage1()

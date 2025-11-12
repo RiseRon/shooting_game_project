@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class PlayerShoot : MonoBehaviour
 {
-    public GameObject bulletPrefab;
-    public float cooldownTime = 0.5f;
-    private float nextShootTime = 0f;
+    public GameObject bulletPrefab; // 발사할 오브젝트
+    public float cooldownTime = 0.5f; // 발사 쿨타임
+    private float nextShootTime = 0f; // 다음 발사 시간
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

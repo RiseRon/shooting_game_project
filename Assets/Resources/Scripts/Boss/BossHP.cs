@@ -1,13 +1,17 @@
 using UnityEngine;
-using UnityEngine.UI;
+
 public class BossHP : MonoBehaviour
 {
-    float dmage = 1f; // 플레이어 공격력
-    public Slider bossHPBar;
+    private float HP; // 채력
+    public float maxHP = 200f;
+    private HyunMooAI bossAI;
+    public bool enabledCheck = true;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        HP = maxHP;
+        GameManager.Instance.ChangeBossHP(HP);
+        bossAI = GetComponent<HyunMooAI>();
     }
 
     // Update is called once per frame
@@ -15,19 +19,20 @@ public class BossHP : MonoBehaviour
     {
         
     }
-    private void OnTriggerEnter2D(Collider2D other)
+    public void TakeDamage(float amount)
     {
-        if (other.CompareTag("Bullet")) // 보스 충돌 감지 확인
+        if (enabledCheck)
         {
-            ChangeHealth(dmage); // 채력 변경 함수 호출
-            Destroy(other.gameObject); // 탄환 제거
-        }
-    }
-    private void ChangeHealth(float attack) // 채력 변경 함수
-    {
-        if(bossHPBar.value > 0)
-        {
-            bossHPBar.value -= attack; // 공격력에 따른 채력 감소
+            HP += amount; // 채력 값 변경
+
+            bossAI.CheckForPettern(HP); // 패턴 확인
+
+            GameManager.Instance.ChangeBossHP(HP); // 채력 ui 변경 호출
+
+            if (HP <= 0) // 사망 확인
+            {
+                bossAI.BossDie();
+            }
         }
     }
 }

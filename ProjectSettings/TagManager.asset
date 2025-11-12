@@ -7,6 +7,9 @@ TagManager:
   - Palayer
   - Boss
   - Bullet
+  - BossHP
+  - PetternBullet
+  - BossBullet
   layers:
   - Default
   - TransparentFX
