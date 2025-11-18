@@ -749,10 +749,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: HyunMoo
       objectReference: {fileID: 0}
-    - target: {fileID: 5308822537844344433, guid: 148c230abd6e66146aff7465ae823f5a, type: 3}
-      propertyPath: patternBullet
-      value: 
-      objectReference: {fileID: 1527929122789266846, guid: c077a60cc26113f41b53478a037306e6, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

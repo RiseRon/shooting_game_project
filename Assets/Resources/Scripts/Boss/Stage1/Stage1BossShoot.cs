@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class HyunMooShoot : MonoBehaviour
+public class Stage1BossShoot : MonoBehaviour
 {
     public GameObject bulletPrefab; // 발사할 오브젝트
     public float cooldownTime = 2f; // 발사 쿨타임

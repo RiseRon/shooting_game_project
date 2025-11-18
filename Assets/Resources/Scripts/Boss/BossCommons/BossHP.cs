@@ -4,14 +4,14 @@ public class BossHP : MonoBehaviour
 {
     private float HP; // Ã¤·Â
     public float maxHP = 200f;
-    private HyunMooAI bossAI;
+    private Stage1BossAI bossAI;
     public bool enabledCheck = true;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         HP = maxHP;
         GameManager.Instance.ChangeBossHP(HP);
-        bossAI = GetComponent<HyunMooAI>();
+        bossAI = GetComponent<Stage1BossAI>();
     }
 
     // Update is called once per frame

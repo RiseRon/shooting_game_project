@@ -1,18 +1,18 @@
 using UnityEngine;
 
-public class HyunMooAI : MonoBehaviour
+public class Stage1BossAI : MonoBehaviour
 {
-    private HyunMooShoot bossAttack;
+    private Stage1BossShoot bossAttack;
     private BossMove bossMove;
-    private HyunMooPattern bossPattern;
+    private Stage1BossPattern bossPattern;
     private BossHP bossHP;
     private int checkTime = 2; // 보스 패턴 사용 횟수
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        bossAttack = GetComponent<HyunMooShoot>();
+        bossAttack = GetComponent<Stage1BossShoot>();
         bossMove = GetComponent<BossMove>();
-        bossPattern = GetComponent<HyunMooPattern>();
+        bossPattern = GetComponent<Stage1BossPattern>();
         bossHP = GetComponent<BossHP>();
         bossAttack.enabled = true;
         bossPattern.enabled = false;

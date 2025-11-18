@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class HyunMooPattern : MonoBehaviour
+public class Stage1BossPattern : MonoBehaviour
 {
     public GameObject patternBullet;
     private Vector2[] patternPoint;
@@ -23,13 +23,13 @@ public class HyunMooPattern : MonoBehaviour
             new Vector2(150, 0),
             new Vector2(150, -150)
         };
-        Vector2 bulletPo = new Vector2(transform.position.x - 140, transform.position.y);
+        Vector2 bulletPo = new Vector2(transform.position.x - 160, transform.position.y);
         for (int i = 0; i < patternPoint.Length; i++)
         {
 
             GameObject newObject = Instantiate(patternBullet, bulletPo, transform.rotation);
             newObject.name = "PetternBullet_" + i;
-            PetternBulletMove pettern = newObject.GetComponent<PetternBulletMove>();
+            Stage1BossPatternBulletMove pettern = newObject.GetComponent<Stage1BossPatternBulletMove>();
             if (pettern != null)
             {
                 pettern.vector2Point(patternPoint[i]);
@@ -43,7 +43,7 @@ public class HyunMooPattern : MonoBehaviour
         endCheck--;
         if (endCheck == 0)
         {
-            HyunMooAI bossAI = GetComponent<HyunMooAI>();
+            Stage1BossAI bossAI = GetComponent<Stage1BossAI>();
             bossAI.EndPattern();
         }
     }

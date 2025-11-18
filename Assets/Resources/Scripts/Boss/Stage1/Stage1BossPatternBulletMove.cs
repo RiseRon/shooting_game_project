@@ -2,7 +2,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class PetternBulletMove : MonoBehaviour
+public class Stage1BossPatternBulletMove : MonoBehaviour
 {
     private float moveSpeed = 500f;
     private float returnSpeed;
@@ -53,7 +53,7 @@ public class PetternBulletMove : MonoBehaviour
     {
         if (other.CompareTag("Boss"))
         {
-            HyunMooAI bossAI = other.GetComponent<HyunMooAI>();
+            Stage1BossAI bossAI = other.GetComponent<Stage1BossAI>();
             bossAI.EndPattern();
             BossHP bossHP = other.GetComponent<BossHP>();
             bossHP.TakeDamage(HealHP);
