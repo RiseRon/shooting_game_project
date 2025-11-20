@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class HyunMooBulletMove : MonoBehaviour
+public class Stage1BossBulletMove : MonoBehaviour
 {
     private Transform PlayerTransform;
     public float moveSpeed = 200f; // 이동 속도

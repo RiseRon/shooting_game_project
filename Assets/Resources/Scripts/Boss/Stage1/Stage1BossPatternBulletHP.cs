@@ -1,15 +1,15 @@
 using UnityEditor;
 using UnityEngine;
 
-public class PetternBulletHP : MonoBehaviour
+public class Stage1BossPatternBulletHP : MonoBehaviour
 {
     private float HP = 1f;
-    private HyunMooPattern bossPattern;
+    private Stage1BossPattern bossPattern;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         GameObject bossObject = GameObject.FindWithTag("Boss");
-        bossPattern = bossObject.GetComponent<HyunMooPattern>();
+        bossPattern = bossObject.GetComponent<Stage1BossPattern>();
     }
 
     // Update is called once per frame

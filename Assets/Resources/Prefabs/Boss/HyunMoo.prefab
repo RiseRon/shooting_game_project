@@ -209,6 +209,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BossHP
   maxHP: 200
+  enabledCheck: 1
 --- !u!114 &5966128270761917769
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -221,9 +222,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b24806f73208a814b8914e1c294e4221, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HyunMooAI
-  bossAttack: {fileID: 798529766241923289}
-  bossPettern: {fileID: 5308822537844344433}
-  bossMove: {fileID: 2843045019011335276}
 --- !u!114 &5308822537844344433
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -236,4 +234,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62d1d3c673aafb2469b3df7bf0f0187d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HyunMooPattern
-  petternBullet: {fileID: 1527929122789266846, guid: c077a60cc26113f41b53478a037306e6, type: 3}
+  patternBullet: {fileID: 1527929122789266846, guid: c077a60cc26113f41b53478a037306e6, type: 3}
