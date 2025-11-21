@@ -53,9 +53,6 @@ public class Stage1BossAI : MonoBehaviour
     }
     public void BossDie()
     {
-        bossAttack.enabled = false;
-        bossPattern.enabled = false;
-        bossMove.enabled = false;
-        bossHP.enabledCheck = false;
+        GameManager.Instance.currentState = GameManager.GameState.GameClear;
     }
 }

@@ -8,8 +8,8 @@ TagManager:
   - Boss
   - Bullet
   - BossHP
-  - PetternBullet
   - BossBullet
+  - PlayerHP
   layers:
   - Default
   - TransparentFX

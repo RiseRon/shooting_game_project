@@ -1,3 +1,4 @@
+using System.Threading;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -8,9 +9,10 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get; private set; }
 
     private Slider bossHPBar;
+    private Image playerHP;
 
     // 게임 상태 (예시)
-    public enum GameState { Title, Playing, Paused, GameOver }
+    public enum GameState { Playing, GameOver, GameClear }
     public GameState currentState;
 
     // **[싱글톤 초기화 로직]**
@@ -31,16 +33,41 @@ public class GameManager : MonoBehaviour
         {
             bossHPBar = bossHP.GetComponent<Slider>();
         }
-            // 씬이 바뀌어도 이 오브젝트가 파괴되지 않도록 설정합니다.
-            DontDestroyOnLoad(gameObject);
+        GameObject player = GameObject.FindWithTag("PlayerHP");
+        if (player != null)
+        {
+            playerHP = player.GetComponent<Image>();
+        }
+        // 씬이 바뀌어도 이 오브젝트가 파괴되지 않도록 설정합니다.
+        DontDestroyOnLoad(gameObject);
 
         // 초기 상태 설정
         currentState = GameState.Playing;
         Debug.Log("게임 매니저 초기화 완료.");
     }
+    void Update()
+    {
+        switch (currentState)
+        {
+            case GameState.Playing:
+
+                break;
+            case GameState.GameOver:
+                Time.timeScale = 0;
+                break;
+            case GameState.GameClear:
+                Time.timeScale = 0;
+                break;
+
+        }
+    }
     public void ChangeBossHP(float change) // 채력 변경 함수
     {
             bossHPBar.value = change; // 채력 변경
+    }
+    public void ChangePlayerHP(Sprite change) // 채력 변경 함수
+    {
+        playerHP.sprite = change; // 채력 변경
     }
 
 }

@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Stage1BossPatternBulletHP : MonoBehaviour
 {
-    private float HP = 1f;
+    private float HP = 10f;
     private Stage1BossPattern bossPattern;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -21,9 +21,10 @@ public class Stage1BossPatternBulletHP : MonoBehaviour
     {
         if (other.CompareTag("Bullet"))
         {
+            PlayerBulletMove bulletMove = other.GetComponent<PlayerBulletMove>();
             if (HP > 0)
             {
-                HP--;
+                HP -= bulletMove.damage;
                 Destroy(other.gameObject);
             }
             if (HP <= 0)

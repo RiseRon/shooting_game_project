@@ -10,7 +10,7 @@ public class Stage1BossPatternBulletMove : MonoBehaviour
     private int moveOption = 1;
     private Transform bossTransform;
     private Vector2 direction;
-    private float HealHP = 20;
+    private float HealHP = -20;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -54,10 +54,13 @@ public class Stage1BossPatternBulletMove : MonoBehaviour
         if (other.CompareTag("Boss"))
         {
             Stage1BossAI bossAI = other.GetComponent<Stage1BossAI>();
-            bossAI.EndPattern();
-            BossHP bossHP = other.GetComponent<BossHP>();
-            bossHP.TakeDamage(HealHP);
-            Destroy(gameObject);
+            if (bossAI != null)
+            {
+                bossAI.EndPattern();
+                BossHP bossHP = other.GetComponent<BossHP>();
+                bossHP.TakeDamage(HealHP);
+                Destroy(gameObject);
+            }
         }
     }
     public void vector2Point(Vector2 point)

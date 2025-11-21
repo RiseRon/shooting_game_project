@@ -23,7 +23,7 @@ public class BossHP : MonoBehaviour
     {
         if (enabledCheck)
         {
-            HP += amount; // 채력 값 변경
+            HP -= amount; // 채력 값 변경
 
             bossAI.CheckForPettern(HP); // 패턴 확인
 

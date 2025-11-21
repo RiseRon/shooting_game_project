@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlayerBulletMove : MonoBehaviour
 {
-    private float damage = -10f; // 플레이어 공격력
+    public float damage; // 플레이어 공격력
     public float moveSpeed = 1000f; // 이동 속도
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
