@@ -482,17 +482,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-<<<<<<< Updated upstream
-=======
     - target: {fileID: 850277624506212117, guid: f423b19a1a172ca45b26acc88704266f, type: 3}
       propertyPath: m_Value
       value: 200
       objectReference: {fileID: 0}
-    - target: {fileID: 1348625184678319412, guid: f423b19a1a172ca45b26acc88704266f, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 68f4acb4320249b49b98bbadec31d622, type: 3}
->>>>>>> Stashed changes
     - target: {fileID: 3958344003102804628, guid: f423b19a1a172ca45b26acc88704266f, type: 3}
       propertyPath: m_Pivot.x
       value: 0
