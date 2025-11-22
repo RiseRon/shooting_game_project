@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Stage1BossAI : MonoBehaviour
+public class Stage1BossAI : BossAI_Base
 {
     private Stage1BossShoot bossAttack;
     private BossMove bossMove;
@@ -25,7 +25,7 @@ public class Stage1BossAI : MonoBehaviour
     {
         
     }
-    public  void CheckForPettern(float nowBossHP)
+    public override void CheckForPattern(float nowBossHP)
     {
         if (nowBossHP <= 140 && checkTime == 2)
         {
@@ -44,14 +44,14 @@ public class Stage1BossAI : MonoBehaviour
             checkTime--;
         }
     }
-    public void EndPattern()
+    public override void EndPattern()
     {
         bossAttack.enabled = true;
         bossPattern.enabled = false;
         bossMove.enabled = true;
         bossHP.enabledCheck = true;
     }
-    public void BossDie()
+    public override void BossDie()
     {
         GameManager.Instance.currentState = GameManager.GameState.GameClear;
     }

@@ -1,33 +1,37 @@
 using System.Collections.Concurrent;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityEngine.Windows;
 public class BossMove : MonoBehaviour
 {
+    private Dictionary<string, (float speed, float range)> bossMoveData;
     private string bossSelect; // 씬 이름(스테이지) 확인 용도
     private float moveSpeed; // 이동 스피드
     private float moveRange; // 이동 범위
-    private int direction = 1;// 이동 방향
+    private Vector2 direction; // 이동 방향
     // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Awake()
+    {
+        // 1. 초기 데이터 설정 (Awake에서 한 번만 설정)
+        // 씬 이름(key)과 (속도, 범위)의 튜플(value)을 저장
+        bossMoveData = new Dictionary<string, (float speed, float range)>
+        {
+            { "Stage1", (64f, 80f) }, // Stage1: 속도 64, 범위 80
+            { "Stage2", (120f, 120f) }, // Stage2: 속도 120, 범위 120
+            { "Stage3", (96f, 120f) }, // Stage2: 속도 120, 범위 120
+            { "Stage4", (0f, 0f) }
+        };
+        direction = Vector2.up.normalized;
+    }
     void Start()
     {
         Scene currentScene = SceneManager.GetActiveScene(); // 현재 씬 불러오기
         bossSelect = currentScene.name; // 현재 씬에서 씬 이름(스테이지) 가져오기
-        switch (bossSelect) // 현재 씬 이름(스테이지)에 따라서 이동 범위 + 스피드 초기화
+        if (bossMoveData.ContainsKey(bossSelect))
         {
-            case "Stage1":
-                Stage1();
-                break;
-            case "Stage2":
-                Stage2();
-                break;
-            case "Stage3":
-                Stage3();
-                break;
-            case "Stage4":
-                Stage4();
-                break;
+            (moveSpeed, moveRange) = bossMoveData[bossSelect];
         }
     }
 
@@ -36,33 +40,12 @@ public class BossMove : MonoBehaviour
     {
         if (transform.position.y >= moveRange) // 위쪽 이동 범위를 넘었는지 체크
         {
-            direction = -1; // 아래쪽 방향으로 전환
+            direction = Vector2.down.normalized; // 아래쪽 방향으로 전환
         }
         else if (transform.position.y <= -moveRange) // 아래쪽 이동 범위를 넘었는지 체크
         {
-            direction = 1; // 위쪽 방향으로 전환
+            direction = Vector2.up.normalized; // 위쪽 방향으로 전환
         }
-        transform.position = new Vector2(transform.position.x, transform.position.y + (direction * moveSpeed * Time.deltaTime));
-    }
-    // 스테이지에 따른 초기화
-    private void Stage1()
-    {
-        moveSpeed = 80;
-        moveRange = 100;
-    }
-    private void Stage2()
-    {
-        moveSpeed = 0;
-        moveRange = 0;
-    }
-    private void Stage3()
-    {
-        moveSpeed = 0;
-        moveRange = 0;
-    }
-    private void Stage4()
-    {
-        moveSpeed = 0;
-        moveRange = 0;
+        transform.Translate(direction * moveSpeed * Time.deltaTime);
     }
 }

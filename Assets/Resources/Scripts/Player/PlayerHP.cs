@@ -2,13 +2,11 @@ using UnityEngine;
 
 public class PlayerHP : MonoBehaviour
 {
-    private int HP; // 채력
-    public int maxHP = 3;
+    private int HP = 3; // 채력
     private Sprite[] playerHPImage;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        HP = maxHP;
         playerHPImage = new Sprite[]
         {
             Resources.Load<Sprite>("Assets/Image/heart_0"),

@@ -1,17 +1,17 @@
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BossHP : MonoBehaviour
 {
-    private float HP; // 채력
-    public float maxHP = 200f;
-    private Stage1BossAI bossAI;
+    private float HP = 200f; // 채력
+    private BossAI_Base bossAI;
     public bool enabledCheck = true;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        HP = maxHP;
         GameManager.Instance.ChangeBossHP(HP);
-        bossAI = GetComponent<Stage1BossAI>();
+        bossAI = GetComponent<BossAI_Base>();
     }
 
     // Update is called once per frame
@@ -25,7 +25,7 @@ public class BossHP : MonoBehaviour
         {
             HP -= amount; // 채력 값 변경
 
-            bossAI.CheckForPettern(HP); // 패턴 확인
+            bossAI.CheckForPattern(HP); // 패턴 확인
 
             GameManager.Instance.ChangeBossHP(HP); // 채력 ui 변경 호출
 
