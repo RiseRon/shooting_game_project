@@ -44,10 +44,9 @@ public class Stage1BossAI : BossAI_Base
             checkTime--;
         }
     }
-    public override void EndPattern()
+    public void EndPattern()
     {
         bossAttack.enabled = true;
-        bossPattern.enabled = false;
         bossMove.enabled = true;
         bossHP.enabledCheck = true;
     }

@@ -15,6 +15,8 @@ GameObject:
   - component: {fileID: 3649173303126197846}
   - component: {fileID: 4768081274000170377}
   - component: {fileID: 1545843980728322983}
+  - component: {fileID: 8483346599812973848}
+  - component: {fileID: 2243925467883054570}
   m_Layer: 0
   m_Name: JuJak
   m_TagString: Boss
@@ -205,3 +207,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f866e6d58208a1140b088852dcb70bcf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Stage2BossAi
+--- !u!114 &8483346599812973848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 735881912037566334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1eb7b7f23bb903c4c93cb2541b45bd17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Stage2BossShoot
+  bulletPrefab: {fileID: 1233492033468495579, guid: 323195c4ebd884c44967ef067526410d, type: 3}
+  cooldownTime: 0.8
+--- !u!114 &2243925467883054570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 735881912037566334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb656566e0b989e44b67e57ec216b3a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Stage2BossPattern

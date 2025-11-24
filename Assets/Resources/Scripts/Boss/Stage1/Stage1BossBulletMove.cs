@@ -3,7 +3,7 @@ using UnityEngine;
 public class Stage1BossBulletMove : MonoBehaviour
 {
     private Transform PlayerTransform;
-    public float moveSpeed = 200f; // 이동 속도
+    public float moveSpeed; // 이동 속도
     private Vector2 direction; // 이동 방향
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -21,7 +21,7 @@ public class Stage1BossBulletMove : MonoBehaviour
     void Update()
     {
         transform.Translate(direction * moveSpeed * Time.deltaTime); // 탄환 움직임
-        if (transform.position.x <= -740) // 화면을 넘어가면 제거
+        if (transform.position.x <= -770) // 화면을 넘어가면 제거
         {
             Destroy(gameObject);
         }

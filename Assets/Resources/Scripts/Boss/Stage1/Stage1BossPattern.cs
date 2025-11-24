@@ -3,11 +3,13 @@ using UnityEngine;
 public class Stage1BossPattern : MonoBehaviour
 {
     public GameObject patternBullet;
+    public float moveSpeed = 1000f;
     private Vector2[] patternPoint;
     private int endCheck = 3;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+
     }
 
     // Update is called once per frame
@@ -28,11 +30,11 @@ public class Stage1BossPattern : MonoBehaviour
         {
 
             GameObject newObject = Instantiate(patternBullet, bulletPo, transform.rotation);
-            newObject.name = "PetternBullet_" + i;
-            Stage1BossPatternBulletMove pettern = newObject.GetComponent<Stage1BossPatternBulletMove>();
-            if (pettern != null)
+            Stage1BossPatternBulletMove pattern = newObject.GetComponent<Stage1BossPatternBulletMove>();
+            if (pattern != null)
             {
-                pettern.vector2Point(patternPoint[i]);
+                pattern.moveSpeed = moveSpeed;
+                pattern.vector2Point(patternPoint[i]);
             }
 
         }

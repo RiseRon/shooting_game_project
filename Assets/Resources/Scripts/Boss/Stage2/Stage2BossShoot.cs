@@ -1,11 +1,11 @@
 using UnityEngine;
 
-public class Stage3BossPattern : MonoBehaviour
+public class Stage2BossShoot : MonoBehaviour
 {
     public GameObject bulletPrefab; // 발사할 오브젝트
-    public float cooldownTime = 13.5f; // 발사 쿨타임
-    public float moveSpeed = 600;
-    private float nextShootTime = 2f; // 다음 발사 시간
+    public float cooldownTime = 0.8f; // 발사 쿨타임
+    public float moveSpeed = 720f;
+    private float nextShootTime = 0f; // 다음 발사 시간
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -24,7 +24,7 @@ public class Stage3BossPattern : MonoBehaviour
             Vector2 bulletPo = new Vector2(transform.position.x - 140, transform.position.y); // 발사 위치 초기화
             GameObject newObject = Instantiate(bulletPrefab, bulletPo, transform.rotation); // 탄환 소환
             nextShootTime = Time.time + cooldownTime; // 다음 발사 시간 수정
-            Stage3BossPatternBulletMove bulletMove = newObject.GetComponent<Stage3BossPatternBulletMove>();
+            Stage2BossBulletMove bulletMove = newObject.GetComponent<Stage2BossBulletMove>();
             bulletMove.moveSpeed = moveSpeed;
         }
     }

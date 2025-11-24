@@ -4,7 +4,7 @@ using UnityEngine.UIElements;
 
 public class Stage1BossPatternBulletMove : MonoBehaviour
 {
-    private float moveSpeed = 500f;
+    public float moveSpeed;
     private float returnSpeed;
     private Vector2 targetPoint;
     private int moveOption = 1;
