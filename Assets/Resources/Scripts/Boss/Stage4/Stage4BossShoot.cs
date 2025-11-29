@@ -1,12 +1,11 @@
-using System.Net.NetworkInformation;
 using Unity.Mathematics;
 using UnityEngine;
 
-public class Stage3BossShoot : MonoBehaviour
+public class Stage4BossShoot : MonoBehaviour
 {
     public GameObject bulletPrefab; // 발사할 오브젝트
-    public float cooldownTime = 1f; // 발사 쿨타임
-    public float moveSpeed = 400f;
+    public float cooldownTime = 0.5f; // 발사 쿨타임
+    public float moveSpeed = 900f;
     private float nextShootTime = 0f; // 다음 발사 시간
     private float[] bulletDirection1 = { 30, 0, -30 };
     // Start is called once before the first execution of Update after the MonoBehaviour is created

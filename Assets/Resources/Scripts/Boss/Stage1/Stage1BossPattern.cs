@@ -30,11 +30,16 @@ public class Stage1BossPattern : MonoBehaviour
         {
 
             GameObject newObject = Instantiate(patternBullet, bulletPo, transform.rotation);
-            Stage1BossPatternBulletMove pattern = newObject.GetComponent<Stage1BossPatternBulletMove>();
-            if (pattern != null)
+            Stage1BossPatternBulletMove move = newObject.GetComponent<Stage1BossPatternBulletMove>();
+            Stage1BossPatternBulletHP hp = newObject.GetComponent<Stage1BossPatternBulletHP>();
+            if(hp != null)
             {
-                pattern.moveSpeed = moveSpeed;
-                pattern.vector2Point(patternPoint[i]);
+               hp.hp = 10f;
+            }
+            if (move != null)
+            {
+                move.moveSpeed = moveSpeed;
+                move.vector2Point(patternPoint[i]);
             }
 
         }

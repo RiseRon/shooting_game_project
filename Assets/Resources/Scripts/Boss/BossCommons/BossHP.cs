@@ -4,13 +4,13 @@ using UnityEngine.SceneManagement;
 
 public class BossHP : MonoBehaviour
 {
-    private float HP = 200f; // 채력
+    public float HP; // 채력
     private BossAI_Base bossAI;
     public bool enabledCheck = true;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        GameManager.Instance.ChangeBossHP(HP);
+        UIManager_Game.Instance.ChangeBossHP(HP);
         bossAI = GetComponent<BossAI_Base>();
     }
 
@@ -27,7 +27,7 @@ public class BossHP : MonoBehaviour
 
             bossAI.CheckForPattern(HP); // 패턴 확인
 
-            GameManager.Instance.ChangeBossHP(HP); // 채력 ui 변경 호출
+            UIManager_Game.Instance.ChangeBossHP(HP); // 채력 ui 변경 호출
 
             if (HP <= 0) // 사망 확인
             {

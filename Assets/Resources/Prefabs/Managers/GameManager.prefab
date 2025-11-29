@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3710193359340855299}
   - component: {fileID: 8247814508795087981}
+  - component: {fileID: 4907943799906127295}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -44,5 +45,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbbe3aa49bbf2a844bc3fadec686cbdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
-  bossHPBar: {fileID: 0}
-  currentState: 1
+  currentState: 0
+--- !u!114 &4907943799906127295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 617749496483825835}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f0a9b5f65cac704295b4f2f10ca94d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UIManager_Game

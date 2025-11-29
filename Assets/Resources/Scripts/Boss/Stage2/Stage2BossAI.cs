@@ -16,13 +16,20 @@ public class Stage2BossAI : BossAI_Base
         bossAttack.enabled = true;
         bossPattern.enabled = false;
         bossMove.enabled = true;
-
+        ResetGame();
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        
+    }
+    public override void ResetGame()
+    {
+        bossHP.HP = 150f;
+        bossMove.moveSpeed = 120f;
+        bossMove.moveRange = 120f;
+        UIManager_Game.Instance.UIReset(bossHP.HP);
     }
     public override void CheckForPattern(float nowBossHP)
     {

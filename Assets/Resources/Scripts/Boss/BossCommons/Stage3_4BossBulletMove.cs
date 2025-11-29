@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Stage3BossBulletMove : MonoBehaviour
+public class Stage3_4BossBulletMove : MonoBehaviour
 {
     public float moveSpeed; // 이동 속도
     private Vector2 direction; // 이동 방향

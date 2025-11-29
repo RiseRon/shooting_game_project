@@ -3,17 +3,10 @@ using UnityEngine;
 public class PlayerHP : MonoBehaviour
 {
     private int HP = 3; // Ã¤·Â
-    private Sprite[] playerHPImage;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        playerHPImage = new Sprite[]
-        {
-            Resources.Load<Sprite>("Assets/Image/heart_0"),
-            Resources.Load<Sprite>("Assets/Image/heart_1"),
-            Resources.Load<Sprite>("Assets/Image/heart_2"),
-            Resources.Load<Sprite>("Assets/Image/heart_3")
-        };
+        
     }
     // Update is called once per frame
     void Update()
@@ -27,7 +20,7 @@ public class PlayerHP : MonoBehaviour
             if (HP > 0)
             {
                 HP--;
-                GameManager.Instance.ChangePlayerHP(playerHPImage[HP]);
+                UIManager_Game.Instance.ChangePlayerHP(HP);
                 Destroy(other.gameObject);
             }
             if (HP <= 0)

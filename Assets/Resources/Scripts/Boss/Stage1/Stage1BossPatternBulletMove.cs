@@ -7,19 +7,20 @@ public class Stage1BossPatternBulletMove : MonoBehaviour
     public float moveSpeed;
     private float returnSpeed;
     private Vector2 targetPoint;
-    private int moveOption = 1;
     private Transform bossTransform;
-    private Vector2 direction;
     private float HealHP = -20;
+    private float direction;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        GameObject PlayerObject = GameObject.FindWithTag("Boss"); // 플레이어 찾기
+        GameObject PlayerObject = GameObject.FindWithTag("Boss"); // 보스 찾기
 
         if (PlayerObject != null)
         {
-            bossTransform = PlayerObject.transform; // 플레이어의 포지션 값 받기
+            bossTransform = PlayerObject.transform; // 보스의 포지션 값 받기
         }
+        direction = Vector3.Distance(transform.position, targetPoint);
+        SetPosition();
     }
 
     // Update is called once per frame
@@ -27,27 +28,25 @@ public class Stage1BossPatternBulletMove : MonoBehaviour
     {
         Move();
     }
+    private void SetPosition()
+    {
+        while (true)
+        {
+            if (direction > 0.01f)
+            {
+                transform.position = Vector2.MoveTowards(transform.position, targetPoint, moveSpeed * Time.deltaTime);
+            }
+            else if (direction <= 0.01f)
+            {
+                transform.position = targetPoint;
+                returnSpeed = Vector3.Distance(transform.position, bossTransform.position) / 25;
+                break;
+            }
+        }
+    }
     private void Move()
     {
-        switch(moveOption)
-        {
-            case 1:
-                if (Vector3.Distance(transform.position, targetPoint) > 0.01f)
-                {
-                    transform.position = Vector2.MoveTowards(transform.position, targetPoint, moveSpeed * Time.deltaTime);
-                }
-                else if (Vector3.Distance(transform.position, targetPoint) <= 0.01f)
-                {
-                    transform.position = targetPoint;
-                    moveOption = 2;
-                }
-                break;
-            case 2:
-                returnSpeed = Vector3.Distance(transform.position, bossTransform.position) / 25;
-                transform.position = Vector2.MoveTowards(transform.position, bossTransform.position, returnSpeed * Time.deltaTime);
-                break;
-
-        }
+        transform.position = Vector2.MoveTowards(transform.position, bossTransform.position, returnSpeed * Time.deltaTime);
     }
     private void OnTriggerEnter2D(Collider2D other)
     {

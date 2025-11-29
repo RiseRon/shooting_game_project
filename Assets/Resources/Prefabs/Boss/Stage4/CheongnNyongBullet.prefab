@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1233492033468495579
+--- !u!1 &268009412382710649
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,39 +8,39 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5985056267824063598}
-  - component: {fileID: 4930864780339927580}
-  - component: {fileID: 3547356797943052215}
-  - component: {fileID: -986098973759063806}
+  - component: {fileID: 3383590076260709627}
+  - component: {fileID: 1422502826412702805}
+  - component: {fileID: 2721829994468667418}
+  - component: {fileID: 8789713403924921723}
   m_Layer: 0
-  m_Name: JuJakBullet
+  m_Name: CheongnNyongBullet
   m_TagString: BossBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5985056267824063598
+--- !u!4 &3383590076260709627
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1233492033468495579}
+  m_GameObject: {fileID: 268009412382710649}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 242.59872, y: -60.718304, z: 0}
+  m_LocalPosition: {x: 410.48773, y: -4.755311, z: 0}
   m_LocalScale: {x: 100, y: 100, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &4930864780339927580
+--- !u!212 &1422502826412702805
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1233492033468495579}
+  m_GameObject: {fileID: 268009412382710649}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -81,7 +81,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -92,13 +92,13 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &3547356797943052215
+--- !u!58 &2721829994468667418
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1233492033468495579}
+  m_GameObject: {fileID: 268009412382710649}
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
@@ -128,16 +128,16 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.5
---- !u!114 &-986098973759063806
+--- !u!114 &8789713403924921723
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1233492033468495579}
+  m_GameObject: {fileID: 268009412382710649}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aab0de6473768014b80c6439354d22a6, type: 3}
+  m_Script: {fileID: 11500000, guid: a8f97aacdb3859941ae249ca66e0589b, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Stage1_2BossBulletMove
-  moveSpeed: 0
+  m_EditorClassIdentifier: Assembly-CSharp::Stage3BossBulletMove
+  moveSpeed: 900
