@@ -1,24 +1,28 @@
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class UIManager_StageSelect : MonoBehaviour
 {
+    private int selectStage = 0;
 
-    public void LoadStage(int stageNumber)
+    public void SelectStage(int selectNumber)
     {
-        string stageName = "Stage" + stageNumber;
-        SceneManager.LoadScene(stageName);  
-    }
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
+        selectStage = selectNumber;
+        Debug.Log($"selectStage : {selectStage}");
     }
 
-    // Update is called once per frame
-    void Update()
+    public void StartGame()
     {
-        
+        string stageName = "Stage" + selectStage;
+        if (selectStage == 0)
+        {
+            Debug.Log($"스테이지를 선택하세요");
+        }
+        else if (selectStage != 0)
+        {
+            SceneManager.LoadScene(stageName);
+        }
     }
 
     public void BackToMainMenu()

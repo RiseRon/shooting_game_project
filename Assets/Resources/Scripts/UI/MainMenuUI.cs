@@ -8,7 +8,7 @@ public class MainMenuUI : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        uiManager = FindObjectOfType<UIManager_MainMenu>();
+        uiManager = FindFirstObjectByType<UIManager_MainMenu>();
     }
 
     // Update is called once per frame
