@@ -40,7 +40,7 @@ public class Stage1BossAI : BossAI_Base
             bossAttack.enabled = false;
             bossPattern.PatternStart();
             bossMove.enabled = false;
-            bossHP.enabledCheck = false;
+            bossHP.enabled = false;
             checkTime--;
         }
     }
@@ -48,7 +48,7 @@ public class Stage1BossAI : BossAI_Base
     {
         bossAttack.enabled = true;
         bossMove.enabled = true;
-        bossHP.enabledCheck = true;
+        bossHP.enabled = true;
     }
     public override void BossDie()
     {

@@ -141,6 +141,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d24bec9a8777f3647a96911c6f83af21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PetternBulletMove
+  moveSpeed: 0
+  targetPoint: {x: 0, y: 0}
 --- !u!114 &-9200947414926370787
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -153,3 +155,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab45a050c9247e143927e82f6f9a73b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PetternBulletHP
+  hp: 0

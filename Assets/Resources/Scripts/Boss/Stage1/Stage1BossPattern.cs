@@ -5,7 +5,7 @@ public class Stage1BossPattern : MonoBehaviour
     public GameObject patternBullet;
     public float moveSpeed = 1000f;
     private Vector2[] patternPoint;
-    private int endCheck = 3;
+    private int endCheck;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -39,7 +39,7 @@ public class Stage1BossPattern : MonoBehaviour
             if (move != null)
             {
                 move.moveSpeed = moveSpeed;
-                move.vector2Point(patternPoint[i]);
+                move.targetPoint = patternPoint[i];
             }
 
         }
