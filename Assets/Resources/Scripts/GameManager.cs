@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -39,10 +40,10 @@ public class GameManager : MonoBehaviour
 
                 break;
             case GameState.GameOver:
-                Time.timeScale = 0;
+                SceneManager.LoadScene("Defeat");
                 break;
             case GameState.GameClear:
-                Time.timeScale = 0;
+                SceneManager.LoadScene("Victory");
                 break;
 
         }
