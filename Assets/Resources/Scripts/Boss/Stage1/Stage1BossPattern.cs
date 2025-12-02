@@ -4,12 +4,14 @@ public class Stage1BossPattern : MonoBehaviour
 {
     public GameObject patternBullet;
     public float moveSpeed = 1000f;
+    private float animationSpeed = 0.8f;
     private Vector2[] patternPoint;
     private int endCheck;
+    private Animator animator;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -25,7 +27,7 @@ public class Stage1BossPattern : MonoBehaviour
             new Vector2(150, 0),
             new Vector2(150, -150)
         };
-        Vector2 bulletPo = new Vector2(transform.position.x - 160, transform.position.y);
+        Vector2 bulletPo = new Vector2(transform.position.x - 300, transform.position.y + 58);
         for (int i = 0; i < patternPoint.Length; i++)
         {
 
@@ -41,8 +43,9 @@ public class Stage1BossPattern : MonoBehaviour
                 move.moveSpeed = moveSpeed;
                 move.targetPoint = patternPoint[i];
             }
-
         }
+        animator.speed = animationSpeed;
+        animator.SetTrigger("Pattern");
         endCheck = 3;
     }
     public void PatternEndCheck()
@@ -51,6 +54,7 @@ public class Stage1BossPattern : MonoBehaviour
         if (endCheck == 0)
         {
             Stage1BossAI bossAI = GetComponent<Stage1BossAI>();
+            animator.SetTrigger("Return");
             bossAI.EndPattern();
         }
     }

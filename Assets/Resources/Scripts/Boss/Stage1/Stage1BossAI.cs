@@ -23,7 +23,7 @@ public class Stage1BossAI : BossAI_Base
     // Update is called once per frame
     void Update()
     {
-        
+
     }
     public override void ResetGame()
     {
@@ -40,7 +40,7 @@ public class Stage1BossAI : BossAI_Base
             bossAttack.enabled = false;
             bossPattern.PatternStart();
             bossMove.enabled = false;
-            bossHP.enabled = false;
+            bossHP.enabledCheck = false;
             checkTime--;
         }
     }
@@ -48,7 +48,8 @@ public class Stage1BossAI : BossAI_Base
     {
         bossAttack.enabled = true;
         bossMove.enabled = true;
-        bossHP.enabled = true;
+        bossHP.enabledCheck = true;
+        bossAttack.nextShootTime = Time.time + 1;
     }
     public override void BossDie()
     {

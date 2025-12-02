@@ -21,7 +21,7 @@ public class Stage1_2BossBulletMove : MonoBehaviour
     void Update()
     {
         transform.Translate(direction * moveSpeed * Time.deltaTime); // 탄환 움직임
-        if (transform.position.x <= -770) // 화면을 넘어가면 제거
+        if (transform.position.x <= -770 || transform.position.y >= 440 || transform.position.y <= -440) // 화면을 넘어가면 제거
         {
             Destroy(gameObject);
         }

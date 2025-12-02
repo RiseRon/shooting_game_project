@@ -11,12 +11,13 @@ GameObject:
   - component: {fileID: 127798302028162015}
   - component: {fileID: 8880290611126956759}
   - component: {fileID: 7151037254529078877}
-  - component: {fileID: 5904017177831635831}
   - component: {fileID: 2843045019011335276}
   - component: {fileID: 798529766241923289}
   - component: {fileID: 6262178017802734911}
   - component: {fileID: 5966128270761917769}
   - component: {fileID: 5308822537844344433}
+  - component: {fileID: 7635305972710877356}
+  - component: {fileID: 4051454329841022735}
   m_Layer: 0
   m_Name: HyunMoo
   m_TagString: Boss
@@ -34,7 +35,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 600, y: 0, z: 0}
-  m_LocalScale: {x: 230, y: 230, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -86,12 +87,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: -6865885590331027969, guid: d59ded9a604ba8a4bb005615073e023c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 499.25925, y: 379.25925}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -124,8 +125,99 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &5904017177831635831
-BoxCollider2D:
+--- !u!114 &2843045019011335276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4790215711472473567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65373266662d9314f94b023270e20f88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BossMove
+  moveSpeed: 0
+  moveRange: 0
+--- !u!114 &798529766241923289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4790215711472473567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0866d9c1c9398974fa3cff9b73dd7d13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HyunMooShoot
+  bulletPrefab: {fileID: 2157975423119532736, guid: bcc4f5dd00e21134881f9e7dfded129b, type: 3}
+  cooldownTime: 2
+  moveSpeed: 200
+--- !u!114 &6262178017802734911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4790215711472473567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e95bc22f24143d45b0b1bff2a1eb1da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BossHP
+  HP: 0
+  enabledCheck: 1
+--- !u!114 &5966128270761917769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4790215711472473567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b24806f73208a814b8914e1c294e4221, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HyunMooAI
+--- !u!114 &5308822537844344433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4790215711472473567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62d1d3c673aafb2469b3df7bf0f0187d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HyunMooPattern
+  patternBullet: {fileID: 1527929122789266846, guid: c077a60cc26113f41b53478a037306e6, type: 3}
+  moveSpeed: 1000
+--- !u!95 &7635305972710877356
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4790215711472473567}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!58 &4051454329841022735
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -158,80 +250,5 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
---- !u!114 &2843045019011335276
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4790215711472473567}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65373266662d9314f94b023270e20f88, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BossMove
---- !u!114 &798529766241923289
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4790215711472473567}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0866d9c1c9398974fa3cff9b73dd7d13, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::HyunMooShoot
-  bulletPrefab: {fileID: 2157975423119532736, guid: bcc4f5dd00e21134881f9e7dfded129b, type: 3}
-  cooldownTime: 2
---- !u!114 &6262178017802734911
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4790215711472473567}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e95bc22f24143d45b0b1bff2a1eb1da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BossHP
-  maxHP: 200
-  enabledCheck: 1
---- !u!114 &5966128270761917769
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4790215711472473567}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b24806f73208a814b8914e1c294e4221, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::HyunMooAI
---- !u!114 &5308822537844344433
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4790215711472473567}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62d1d3c673aafb2469b3df7bf0f0187d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::HyunMooPattern
-  patternBullet: {fileID: 1527929122789266846, guid: c077a60cc26113f41b53478a037306e6, type: 3}
+  m_Offset: {x: -50, y: 0}
+  m_Radius: 200
