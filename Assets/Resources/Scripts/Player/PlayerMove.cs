@@ -7,10 +7,10 @@ public class PlayerMove : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        minX = -660;
-        maxX = 660;
-        minY = -350;
-        maxY = 350;
+        minX = -666;
+        maxX = 666;
+        minY = -345;
+        maxY = 345;
     }
 
     // Update is called once per frame

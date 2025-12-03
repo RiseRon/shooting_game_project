@@ -34,7 +34,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 600, y: 0, z: 0}
-  m_LocalScale: {x: 230, y: 230, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -59,8 +59,6 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
-  m_ForceMeshLod: -1
-  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -82,11 +80,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 4985435150523133920, guid: 7f55bbbc4b594584d991cbaeac1d4422, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -162,7 +159,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 1248.8889, y: 773.3333}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -182,6 +179,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65373266662d9314f94b023270e20f88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BossMove
+  moveSpeed: 0
+  moveRange: 0
 --- !u!114 &7044456793677296568
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -194,6 +193,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e95bc22f24143d45b0b1bff2a1eb1da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BossHP
+  HP: 0
   enabledCheck: 1
 --- !u!114 &6615777257593446155
 MonoBehaviour:
@@ -221,6 +221,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Stage3BossShoot
   bulletPrefab: {fileID: 5385895970786567498, guid: 222ba7107046061429a32f730a9e8a22, type: 3}
   cooldownTime: 1
+  moveSpeed: 400
 --- !u!114 &31184375254062520
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -235,3 +236,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Stage3BossPattern
   bulletPrefab: {fileID: 1085438738882782692, guid: 75e4535a9c8f2974c8857ded1395a26c, type: 3}
   cooldownTime: 13.5
+  moveSpeed: 600

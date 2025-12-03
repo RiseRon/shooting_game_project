@@ -8,10 +8,12 @@ public class Stage1BossPattern : MonoBehaviour
     private Vector2[] patternPoint;
     private int endCheck;
     private Animator animator;
+    private Collider2D collider;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         animator = GetComponent<Animator>();
+        collider = GetComponent<Collider2D>();
     }
 
     // Update is called once per frame
@@ -21,6 +23,10 @@ public class Stage1BossPattern : MonoBehaviour
     }
     public void PatternStart()
     {
+
+        collider.offset = new Vector2(0, 0);
+        animator.speed = animationSpeed;
+        animator.SetTrigger("Pattern");
         patternPoint = new Vector2[]
         {
             new Vector2(150, 150),
@@ -44,8 +50,6 @@ public class Stage1BossPattern : MonoBehaviour
                 move.targetPoint = patternPoint[i];
             }
         }
-        animator.speed = animationSpeed;
-        animator.SetTrigger("Pattern");
         endCheck = 3;
     }
     public void PatternEndCheck()
@@ -53,6 +57,7 @@ public class Stage1BossPattern : MonoBehaviour
         endCheck--;
         if (endCheck == 0)
         {
+            collider.offset = new Vector2 (-50, 0);
             Stage1BossAI bossAI = GetComponent<Stage1BossAI>();
             animator.SetTrigger("Return");
             bossAI.EndPattern();

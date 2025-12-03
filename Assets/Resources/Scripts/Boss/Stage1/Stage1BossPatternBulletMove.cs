@@ -57,10 +57,10 @@ public class Stage1BossPatternBulletMove : MonoBehaviour
     {
         if (other.CompareTag("Boss"))
         {
-            Stage1BossAI bossAI = other.GetComponent<Stage1BossAI>();
-            if (bossAI != null)
+            Stage1BossPattern bossPattern = other.GetComponent <Stage1BossPattern>();
+            if (bossPattern != null)
             {
-                bossAI.EndPattern();
+                bossPattern.PatternEndCheck();
                 BossHP bossHP = other.GetComponent<BossHP>();
                 bossHP.TakeDamage(HealHP);
                 Destroy(gameObject);

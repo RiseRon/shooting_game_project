@@ -21,7 +21,7 @@ public class Stage2BossShoot : MonoBehaviour
     {
         if (Time.time >= nextShootTime) // 다음 발사 시간 체크
         {
-            Vector2 bulletPo = new Vector2(transform.position.x - 140, transform.position.y); // 발사 위치 초기화
+            Vector2 bulletPo = new Vector2(transform.position.x - 160, transform.position.y); // 발사 위치 초기화
             GameObject newObject = Instantiate(bulletPrefab, bulletPo, transform.rotation); // 탄환 소환
             nextShootTime = Time.time + cooldownTime; // 다음 발사 시간 수정
             Stage1_2BossBulletMove bulletMove = newObject.GetComponent<Stage1_2BossBulletMove>();
