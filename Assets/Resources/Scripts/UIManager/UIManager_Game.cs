@@ -33,10 +33,10 @@ public class UIManager_Game : MonoBehaviour
         }
         playerHPImage = new Sprite[]
         {
-            Resources.Load<Sprite>("Assets/Image/heart_0"),
-            Resources.Load<Sprite>("Assets/Image/heart_1"),
-            Resources.Load<Sprite>("Assets/Image/heart_2"),
-            Resources.Load<Sprite>("Assets/Image/heart_3")
+            Resources.Load<Sprite>("Assets/Image/Player/HP/Heart_0"),
+            Resources.Load<Sprite>("Assets/Image/Player/HP/Heart_1"),
+            Resources.Load<Sprite>("Assets/Image/Player/HP/Heart_2"),
+            Resources.Load<Sprite>("Assets/Image/Player/HP/Heart_3")
         };
 
         // 씬이 바뀌어도 이 오브젝트가 파괴되지 않도록 설정합니다.
@@ -55,7 +55,7 @@ public class UIManager_Game : MonoBehaviour
 
     public void UIReset(float bossHP)
     {
-        playerHP.sprite = Resources.Load<Sprite>("Assets/Image/heart_3");
+        playerHP.sprite = Resources.Load<Sprite>("Assets/Image/Player/HP/Heart_3");
         bossHPBar.maxValue = bossHP;
     }
     public void ChangeBossHP(float change) // 채력 변경 함수
