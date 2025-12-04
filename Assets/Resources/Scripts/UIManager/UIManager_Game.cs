@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.UI;
 
 public class UIManager_Game : MonoBehaviour
@@ -7,6 +8,7 @@ public class UIManager_Game : MonoBehaviour
     private Slider bossHPBar;
     private Image playerHP;
     private Sprite[] playerHPImage;
+    private Color playerColor;
     public static UIManager_Game Instance { get; private set; }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Awake()
@@ -38,7 +40,7 @@ public class UIManager_Game : MonoBehaviour
             Resources.Load<Sprite>("Image/Player/HP/Heart_2"),
             Resources.Load<Sprite>("mage/Player/HP/Heart_3")
         };
-
+        playerColor = playerHP.color;
         // 씬이 바뀌어도 이 오브젝트가 파괴되지 않도록 설정합니다.
         DontDestroyOnLoad(gameObject);
     }
@@ -65,5 +67,15 @@ public class UIManager_Game : MonoBehaviour
     public void ChangePlayerHP(int change) // 채력 변경 함수
     {
         playerHP.sprite = playerHPImage[change]; // 채력 변경
+        playerColor.g = 0.5f;
+        playerColor.b = 0.5f;
+        playerHP.color = playerColor;
+        Invoke("PlayerDamaged", 0.3f);
+    }
+    private void PlayerDamaged()
+    {
+        playerColor.g = 1;
+        playerColor.b = 1;
+        playerHP.color = playerColor;
     }
 }

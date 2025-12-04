@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 6615777257593446155}
   - component: {fileID: 8323927939151630481}
   - component: {fileID: 31184375254062520}
+  - component: {fileID: 5791388511553648701}
   m_Layer: 0
   m_Name: BackHo
   m_TagString: Boss
@@ -83,12 +84,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 4985435150523133920, guid: 7f55bbbc4b594584d991cbaeac1d4422, type: 3}
+  m_Sprite: {fileID: -7082491029885342893, guid: 3d6290eae32ff9842b4f38141ccac4bb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 9.59, y: 6.01}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -159,8 +160,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1248.8889, y: 773.3333}
-    newSize: {x: 1, y: 1}
+    oldSize: {x: 710.37036, y: 445.18518}
+    newSize: {x: 9.59, y: 6.01}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -237,3 +238,25 @@ MonoBehaviour:
   bulletPrefab: {fileID: 1085438738882782692, guid: 75e4535a9c8f2974c8857ded1395a26c, type: 3}
   cooldownTime: 13.5
   moveSpeed: 600
+--- !u!95 &5791388511553648701
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7453759492240692790}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d6acb98f949241643b9cedd91f9d927f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
