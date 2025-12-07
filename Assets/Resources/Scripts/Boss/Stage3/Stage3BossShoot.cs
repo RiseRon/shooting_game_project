@@ -27,7 +27,7 @@ public class Stage3BossShoot : MonoBehaviour
             for (int i = 0; i < 3; i++)
             {
                 quaternion spawnRotaion = Quaternion.Euler(0f, 0f, bulletDirection1[i]);
-                Vector2 bulletPo = new Vector2(transform.position.x - 140, transform.position.y); // 발사 위치 초기화
+                Vector2 bulletPo = new Vector2(transform.position.x - 400, transform.position.y - 40); // 발사 위치 초기화
                 GameObject newObject = Instantiate(bulletPrefab, bulletPo, spawnRotaion); // 탄환 소환
                 Stage3_4BossBulletMove bulletMove = newObject.GetComponent<Stage3_4BossBulletMove>();
                 bulletMove.moveSpeed = moveSpeed;

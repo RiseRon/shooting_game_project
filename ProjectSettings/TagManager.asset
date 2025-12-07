@@ -17,11 +17,11 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Player
+  - PlayerBullet
+  - Boss
+  - BossBullet
+  - BackGround
   - 
   - 
   - 
@@ -46,6 +46,15 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: BackGround
+    uniqueID: 278606131
+    locked: 0
+  - name: Player&Boss
+    uniqueID: 2433776499
+    locked: 0
+  - name: Bullet
+    uniqueID: 3073942015
     locked: 0
   m_RenderingLayers:
   - Default

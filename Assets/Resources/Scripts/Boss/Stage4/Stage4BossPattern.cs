@@ -10,10 +10,13 @@ public class Stage4BossPattern : MonoBehaviour
     public int CheckTime;
     private bool OnOff;
     private Stage4BossAI bossAI;
+    private Animator animator;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         bossAI = GetComponent<Stage4BossAI>();
+        animator = GetComponent<Animator>();
+        animator.speed = 1.5f;
     }
 
     // Update is called once per frame
@@ -37,6 +40,7 @@ public class Stage4BossPattern : MonoBehaviour
     }
     public void PatternStart()
     {
+        animator.SetTrigger("Pattern");
         OnOff = true;
         CheckTime = 5;
         position = new Vector2(0, 140);
@@ -45,15 +49,17 @@ public class Stage4BossPattern : MonoBehaviour
             GameObject HorWarning = Instantiate(lightHorizontalWarning, position, transform.rotation);
             position.y *= -1;
         }
-
+        animator.SetTrigger("Return");
     }
     public void PatternNext()
     {
+        animator.SetTrigger("Pattern");
         position = new Vector2(-500, 0);
         for (int i = 0; i < 3; i++)
         {
             GameObject VerWarning = Instantiate(lightVerticalWarning, position, transform.rotation);
             position.x += 350;
         }
+        animator.SetTrigger("Return");
     }
 }
