@@ -106,7 +106,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerShoot
   bulletPrefab: {fileID: 2650457191799763197, guid: 4b0af8d8f6611c041ad82ab4b5e53b9c, type: 3}
   specialBulletPrefab: {fileID: 8615389543526711022, guid: 031630d5e80adbe4bbe004556969e406, type: 3}
-  damage: 50
+  damage: 1
   specialDamage: 5
   moveSpeed: 600
   specialMoveSpeed: 600
