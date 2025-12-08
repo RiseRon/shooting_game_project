@@ -2,21 +2,22 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
 
-public class UIManager_MainMenu : MonoBehaviour
+public class UIManager_Result : MonoBehaviour
 {
+    
     void Start()
     {
         
     }
 
-    public void StartGame()
+    public void CloseScene()
     {
         SceneManager.LoadScene("StageSelect");
     }
 
-    public void ExitGame()
+    public void RetryGame()
     {
-        Debug.Log("게임 종료");
-        Application.Quit();
+        //SceneManager.LoadScene();
     }
+
 }

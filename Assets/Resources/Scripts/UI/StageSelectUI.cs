@@ -22,38 +22,38 @@ public class StageSelectUI : MonoBehaviour
 
     public void OnClickStage(int selectNumber)
     {
-        if (soundPlayer != null)
-        {
-            soundPlayer.UIClickSFX();
-        }
         if (uiManager != null)
         {
             //SceneManager.LoadScene(stageNumber);
             uiManager.SelectStage(selectNumber);
         }
-    }
-
-    public void OnClickStart()
-    {
         if (soundPlayer != null)
         {
             soundPlayer.UIClickSFX();
         }
+    }
+
+    public void OnClickStart()
+    {
         if (uiManager != null)
         {
             uiManager.StartGame();
+        }
+        if (soundPlayer != null)
+        {
+            soundPlayer.UIClickSFX();
         }
     }
 
     public void OnClickBack()
     {
-        if (soundPlayer != null)
-        {
-            soundPlayer.UIClickSFX();
-        }
         if (uiManager != null)
         {
             uiManager.BackToMainMenu();
+        }
+        if (soundPlayer != null)
+        {
+            soundPlayer.UIClickSFX();
         }
     }
 }

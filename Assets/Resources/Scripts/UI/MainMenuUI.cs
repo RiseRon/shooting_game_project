@@ -26,25 +26,25 @@ public class MainMenuUI : MonoBehaviour
 
     public void OnClickStart()
     {
-        if (soundPlayer != null)
-        {
-            soundPlayer.UIClickSFX();
-        }
         if (uiManager != null)
         {
             uiManager.StartGame();
+        }
+        if (soundPlayer != null)
+        {
+            soundPlayer.UIClickSFX();
         }
     }
 
     public void OnClickExit()
     {
-        if (soundPlayer != null)
-        {
-            soundPlayer.UIClickSFX();
-        }
         if (uiManager != null)
         {
             uiManager.ExitGame();
+        }
+        if (soundPlayer != null)
+        {
+            soundPlayer.UIClickSFX();
         }
     }
 

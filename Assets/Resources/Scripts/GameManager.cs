@@ -41,9 +41,11 @@ public class GameManager : MonoBehaviour
                 break;
             case GameState.GameOver:
                 SceneManager.LoadScene("Defeat");
+                currentState = GameState.Playing;
                 break;
             case GameState.GameClear:
                 SceneManager.LoadScene("Victory");
+                currentState = GameState.Playing;
                 break;
 
         }
