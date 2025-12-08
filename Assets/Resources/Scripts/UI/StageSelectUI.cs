@@ -5,11 +5,13 @@ public class StageSelectUI : MonoBehaviour
 {
 
     private UIManager_StageSelect uiManager;
+    private SoundPlayer soundPlayer;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         uiManager = FindFirstObjectByType<UIManager_StageSelect>();
+        soundPlayer = FindFirstObjectByType<SoundPlayer>();
     }
 
     // Update is called once per frame
@@ -20,6 +22,10 @@ public class StageSelectUI : MonoBehaviour
 
     public void OnClickStage(int selectNumber)
     {
+        if (soundPlayer != null)
+        {
+            soundPlayer.UIClickSFX();
+        }
         if (uiManager != null)
         {
             //SceneManager.LoadScene(stageNumber);
@@ -29,6 +35,10 @@ public class StageSelectUI : MonoBehaviour
 
     public void OnClickStart()
     {
+        if (soundPlayer != null)
+        {
+            soundPlayer.UIClickSFX();
+        }
         if (uiManager != null)
         {
             uiManager.StartGame();
@@ -37,6 +47,10 @@ public class StageSelectUI : MonoBehaviour
 
     public void OnClickBack()
     {
+        if (soundPlayer != null)
+        {
+            soundPlayer.UIClickSFX();
+        }
         if (uiManager != null)
         {
             uiManager.BackToMainMenu();

@@ -7,13 +7,15 @@ public class Stage1BossShoot : MonoBehaviour
     public float cooldownTime = 2f; // 발사 쿨타임
     public float moveSpeed = 200f; // 탄환 속도
     public float nextShootTime = 0f; // 다음 발사 시간
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
+    private SoundPlayer soundPlayer;
+
     void Start()
     {
-        
+        soundPlayer = FindFirstObjectByType<SoundPlayer>();
     }
 
-    // Update is called once per frame
+
     void Update()
     {
         TryShoot();
@@ -27,6 +29,9 @@ public class Stage1BossShoot : MonoBehaviour
             nextShootTime = Time.time + cooldownTime; // 다음 발사 시간 수정
             Stage1_2BossBulletMove bulletMove = newObject.GetComponent<Stage1_2BossBulletMove>();
             bulletMove.moveSpeed = moveSpeed;
+            if(soundPlayer != null)
+                soundPlayer.BossAttackSFX();
+            
         }
     }
 }

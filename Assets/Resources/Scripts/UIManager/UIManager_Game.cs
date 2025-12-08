@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class UIManager_Game : MonoBehaviour
 {
-
+    private SoundPlayer soundPlayer;
     private Slider bossHPBar;
     private Image playerHP;
     private Sprite[] playerHPImage;
@@ -46,7 +46,7 @@ public class UIManager_Game : MonoBehaviour
     }
     void Start()
     {
-        
+        soundPlayer = FindFirstObjectByType<SoundPlayer>();
     }
 
     // Update is called once per frame
@@ -64,6 +64,9 @@ public class UIManager_Game : MonoBehaviour
     public void ChangeBossHP(float change) // 채력 변경 함수
     {
         bossHPBar.value = change; // 채력 변경
+        if (soundPlayer != null)
+            soundPlayer.BossHitSFX();
+
     }
     public void ChangePlayerHP(int change) // 채력 변경 함수
     {
@@ -72,6 +75,9 @@ public class UIManager_Game : MonoBehaviour
         playerColor.b = 0.5f;
         playerHP.color = playerColor;
         Invoke("PlayerDamaged", 0.3f);
+        if (soundPlayer != null)
+            soundPlayer.PlayerHitSFX();
+        
     }
     private void PlayerDamaged()
     {
