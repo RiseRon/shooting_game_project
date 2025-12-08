@@ -55,10 +55,11 @@ public class UIManager_Game : MonoBehaviour
        
     }
 
-    public void UIReset(float bossHP)
+    public void UIReset(float bossMaxHP)
     {
         playerHP.sprite = Resources.Load<Sprite>("Image/Player/HP/Heart_3");
-        bossHPBar.maxValue = bossHP;
+        bossHPBar.maxValue = bossMaxHP;
+        bossHPBar.value = bossMaxHP;
     }
     public void ChangeBossHP(float change) // 채력 변경 함수
     {

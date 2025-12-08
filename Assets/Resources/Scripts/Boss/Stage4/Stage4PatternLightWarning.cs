@@ -1,12 +1,11 @@
 using UnityEngine;
-using UnityEngine.InputSystem.iOS;
 
 public class Stage4PatternLightWarning: MonoBehaviour
 {
     public GameObject lightDamage;
     private SpriteRenderer spriteRenderer;
     private float alphaValue = 1f;
-    Color currentColor;
+    private Color currentColor;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
