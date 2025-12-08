@@ -701,7 +701,7 @@ PrefabInstance:
     - target: {fileID: 1348625184678319412, guid: f423b19a1a172ca45b26acc88704266f, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 6442eaa47b8e3f64fae3d5fa39ab4b54, type: 3}
+      objectReference: {fileID: 21300000, guid: 68f4acb4320249b49b98bbadec31d622, type: 3}
     - target: {fileID: 3958344003102804628, guid: f423b19a1a172ca45b26acc88704266f, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -851,9 +851,6 @@ PrefabInstance:
       propertyPath: cooldownMask
       value: 
       objectReference: {fileID: 2084223247}
-      propertyPath: damage
-      value: 50
-      objectReference: {fileID: 0}
     - target: {fileID: 8665028916071430317, guid: 419c96c5386cc214d9e90e34f42649f5, type: 3}
       propertyPath: m_Name
       value: Player
