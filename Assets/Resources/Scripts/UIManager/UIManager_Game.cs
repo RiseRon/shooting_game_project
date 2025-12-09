@@ -23,6 +23,24 @@ public class UIManager_Game : MonoBehaviour
 
         // 현재 인스턴스를 static 변수에 할당합니다.
         Instance = this;
+        
+        // 씬이 바뀌어도 이 오브젝트가 파괴되지 않도록 설정합니다.
+        DontDestroyOnLoad(gameObject);
+    }
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+       
+    }
+
+    public void UIReset(float bossMaxHP)
+    {
+        soundPlayer = FindFirstObjectByType<SoundPlayer>();
         GameObject bossHP = GameObject.FindWithTag("BossHP");
         if (bossHP != null)
         {
@@ -38,25 +56,12 @@ public class UIManager_Game : MonoBehaviour
             Resources.Load<Sprite>("Image/Player/HP/Heart_0"),
             Resources.Load<Sprite>("Image/Player/HP/Heart_1"),
             Resources.Load<Sprite>("Image/Player/HP/Heart_2"),
-            Resources.Load<Sprite>("mage/Player/HP/Heart_3")
+            Resources.Load<Sprite>("Image/Player/HP/Heart_3")
         };
-        playerColor = playerHP.color;
-        // 씬이 바뀌어도 이 오브젝트가 파괴되지 않도록 설정합니다.
-        DontDestroyOnLoad(gameObject);
-    }
-    void Start()
-    {
-        soundPlayer = FindFirstObjectByType<SoundPlayer>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-       
-    }
-
-    public void UIReset(float bossMaxHP)
-    {
+        if (playerHP != null)
+        {
+            playerColor = playerHP.color;
+        }
         playerHP.sprite = Resources.Load<Sprite>("Image/Player/HP/Heart_3");
         bossHPBar.maxValue = bossMaxHP;
         bossHPBar.value = bossMaxHP;
@@ -83,6 +88,9 @@ public class UIManager_Game : MonoBehaviour
     {
         playerColor.g = 1;
         playerColor.b = 1;
-        playerHP.color = playerColor;
+        if(playerHP != null)
+        {
+            playerHP.color = playerColor;
+        }
     }
 }

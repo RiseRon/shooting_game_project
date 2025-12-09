@@ -22,6 +22,7 @@ public class UIManager_StageSelect : MonoBehaviour
         else if (selectStage != 0)
         {
             SceneManager.LoadScene(stageName);
+            GameManager.Instance.currentState = GameManager.GameState.Playing;
         }
     }
 

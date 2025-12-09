@@ -43,7 +43,7 @@ public class Stage4BossPattern : MonoBehaviour
         animator.SetTrigger("Pattern");
         OnOff = true;
         CheckTime = 5;
-        position = new Vector2(0, 140);
+        position = new Vector2(0, 160);
         for ( int i = 0;  i < 2; i++ )
         {
             GameObject HorWarning = Instantiate(lightHorizontalWarning, position, transform.rotation);

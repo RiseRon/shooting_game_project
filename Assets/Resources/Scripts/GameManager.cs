@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     // 게임 상태 (예시)
     public enum GameState { Playing, GameOver, GameClear }
     public GameState currentState;
+    private bool OnOff = true;
 
     // **[싱글톤 초기화 로직]**
     private void Awake()
@@ -37,15 +38,24 @@ public class GameManager : MonoBehaviour
         switch (currentState)
         {
             case GameState.Playing:
-
+                if (OnOff)
+                {
+                    OnOff = false;
+                }
                 break;
             case GameState.GameOver:
-                SceneManager.LoadScene("Defeat");
-                currentState = GameState.Playing;
+                if (!OnOff)
+                {
+                    OnOff = true;
+                    SceneManager.LoadScene("Defeat");
+                }
                 break;
             case GameState.GameClear:
-                SceneManager.LoadScene("Victory");
-                currentState = GameState.Playing;
+                if (!OnOff)
+                {
+                    OnOff = true;
+                    SceneManager.LoadScene("Victory");
+                }
                 break;
 
         }
