@@ -13,6 +13,7 @@ public class Stage2BossAI : BossAI_Base
         bossMove = GetComponent<BossMove>();
         bossPattern = GetComponent<Stage2BossPattern>();
         bossHP = GetComponent<BossHP>();
+        bossHP.enabled = true;
         bossAttack.enabled = true;
         bossPattern.enabled = false;
         bossMove.enabled = true;

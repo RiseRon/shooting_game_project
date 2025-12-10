@@ -13,7 +13,6 @@ public class UIManager_Game : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Awake()
     {
-        // 씬에 GameManager가 이미 존재하는지 확인합니다.
         if (Instance != null && Instance != this)
         {
             // 이미 다른 인스턴스가 있다면, 현재 인스턴스를 파괴하여 중복 생성을 막습니다.
