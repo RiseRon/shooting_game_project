@@ -4,14 +4,14 @@ using UnityEngine.UI;
 public class MainMenuUI : MonoBehaviour
 {
 
-    private UIManager_MainMenu uiManager;
+    private UIManager uiManager;
     private SoundPlayer soundPlayer;
     public Image soundButtonImage;
     private Sprite[] volumeSprite;
 
     void Start()
     {
-        uiManager = FindFirstObjectByType<UIManager_MainMenu>();
+        uiManager = FindFirstObjectByType<UIManager>();
         soundPlayer = FindFirstObjectByType<SoundPlayer>();
 
         volumeSprite = new Sprite[]
@@ -28,7 +28,7 @@ public class MainMenuUI : MonoBehaviour
     {
         if (uiManager != null)
         {
-            uiManager.StartGame();
+            uiManager.LoadStageSelectScene();
         }
         if (soundPlayer != null)
         {

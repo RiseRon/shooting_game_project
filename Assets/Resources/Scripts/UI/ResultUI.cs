@@ -4,12 +4,12 @@ using UnityEngine.UI;
 public class ResultUI : MonoBehaviour
 {
 
-    private UIManager_Result uiManager;
+    private UIManager uiManager;
     private SoundPlayer soundPlayer;
 
     void Start()
     {
-        uiManager = FindFirstObjectByType<UIManager_Result>();
+        uiManager = FindFirstObjectByType<UIManager>();
         soundPlayer = FindFirstObjectByType<SoundPlayer>();
 
     }
@@ -18,7 +18,7 @@ public class ResultUI : MonoBehaviour
     {
         if (uiManager != null)
         {
-            uiManager.CloseScene();
+            uiManager.LoadStageSelectScene();
         }
         if (soundPlayer != null)
         {

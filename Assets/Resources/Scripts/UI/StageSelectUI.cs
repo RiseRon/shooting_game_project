@@ -4,13 +4,13 @@ using UnityEngine.SceneManagement;
 public class StageSelectUI : MonoBehaviour
 {
 
-    private UIManager_StageSelect uiManager;
+    private UIManager uiManager;
     private SoundPlayer soundPlayer;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        uiManager = FindFirstObjectByType<UIManager_StageSelect>();
+        uiManager = FindFirstObjectByType<UIManager>();
         soundPlayer = FindFirstObjectByType<SoundPlayer>();
     }
 
@@ -20,12 +20,11 @@ public class StageSelectUI : MonoBehaviour
         
     }
 
-    public void OnClickStage(int selectNumber)
+    public void OnClickStage(int selectIndex)
     {
         if (uiManager != null)
         {
-            //SceneManager.LoadScene(stageNumber);
-            uiManager.SelectStage(selectNumber);
+            uiManager.SelectStage(selectIndex);
         }
         if (soundPlayer != null)
         {
@@ -37,7 +36,7 @@ public class StageSelectUI : MonoBehaviour
     {
         if (uiManager != null)
         {
-            uiManager.StartGame();
+            uiManager.LoadGameStage();
         }
         if (soundPlayer != null)
         {
@@ -49,7 +48,7 @@ public class StageSelectUI : MonoBehaviour
     {
         if (uiManager != null)
         {
-            uiManager.BackToMainMenu();
+            uiManager.LoadMainMenuScene();
         }
         if (soundPlayer != null)
         {
