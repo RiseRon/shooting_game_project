@@ -53,10 +53,6 @@ public class UIManager : MonoBehaviour
         string stageName = "Stage" + selectedStage;
 
         SceneManager.LoadScene(stageName);
-        if (GameManager.Instance != null)
-        {
-            GameManager.Instance.currentState = GameManager.GameState.Playing;
-        }
     }
 
     public void LoadMainMenuScene()

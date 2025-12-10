@@ -15,6 +15,7 @@ public class PlayerHP : MonoBehaviour
             Resources.Load<Sprite>("Image/Player/Player"),
             Resources.Load<Sprite>("Image/Player/PlayerDamaged")
         };
+        HP = 3;
     }
     // Update is called once per frame
     void Update()

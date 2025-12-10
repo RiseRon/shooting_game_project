@@ -63,6 +63,7 @@ public class UIManager_Game : MonoBehaviour
             playerColor = playerHP.color;
         }
         playerHP.sprite = Resources.Load<Sprite>("Image/Player/HP/Heart_3");
+        GameManager.Instance.currentState = GameManager.GameState.Playing;
         bossHPBar.maxValue = bossMaxHP;
         bossHPBar.value = bossMaxHP;
     }
