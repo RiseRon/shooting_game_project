@@ -7,7 +7,7 @@ public class UIManager : MonoBehaviour
 
     private int selectedStage = 0;
     private int lastSelectedStage = 0;
-
+    private int clearedStage = 0;
     private void Awake()
     {
         if (Instance == null)
@@ -21,12 +21,17 @@ public class UIManager : MonoBehaviour
         }
     }
 
+    public void LoadMainMenuScene()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+
     public void LoadStageSelectScene()
     {
         SceneManager.LoadScene("StageSelect");
         selectedStage = 0;
     }
-
+    // 메인메뉴 씬 기능
     public void ExitGame()
     {
         Debug.Log("게임 종료");
@@ -55,9 +60,9 @@ public class UIManager : MonoBehaviour
         SceneManager.LoadScene(stageName);
     }
 
-    public void LoadMainMenuScene()
+    public void BossLock()
     {
-        SceneManager.LoadScene("MainMenu");
+        
     }
 
     // 결과 씬 기능
