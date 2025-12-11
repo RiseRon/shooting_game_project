@@ -670,6 +670,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f423b19a1a172ca45b26acc88704266f, type: 3}
+--- !u!114 &2847425020523619842 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3617151507132974016, guid: f423b19a1a172ca45b26acc88704266f, type: 3}
+  m_PrefabInstance: {fileID: 2847425020523619841}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
 --- !u!1001 &5699200215309884158
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -718,6 +729,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6155837624347312354, guid: 419c96c5386cc214d9e90e34f42649f5, type: 3}
+      propertyPath: cooldownMask
+      value: 
+      objectReference: {fileID: 2847425020523619842}
     - target: {fileID: 8665028916071430317, guid: 419c96c5386cc214d9e90e34f42649f5, type: 3}
       propertyPath: m_Name
       value: Player
