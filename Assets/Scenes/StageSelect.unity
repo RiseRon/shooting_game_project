@@ -1305,7 +1305,7 @@ MonoBehaviour:
   - {fileID: 1368076485}
   - {fileID: 402874752}
   - {fileID: 744457179}
-  lockedSprite: {fileID: 0}
+  lockedSprite: {fileID: 6982346797304239529, guid: bdceb9a0680f3f14e901bb76ad343418, type: 3}
   originalSprites:
   - {fileID: 21300000, guid: 1eb3cbdffffd1ec4889ae4f24b4457f1, type: 3}
   - {fileID: 21300000, guid: 3e320f7a9c44c594291ec8219637c827, type: 3}
