@@ -6,6 +6,10 @@ public class Stage3BossAI : BossAI_Base
     private BossMove bossMove;
     private BossHP bossHP;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
+    private void Awake()
+    {
+        UIManager_Game.Instance.UIReset(200f);
+    }
     void Start()
     {
         bossAttack = GetComponent<Stage3BossShoot>();
@@ -27,7 +31,7 @@ public class Stage3BossAI : BossAI_Base
         bossHP.HP = 200f;
         bossMove.moveSpeed = 96f;
         bossMove.moveRange = 120f;
-        UIManager_Game.Instance.UIReset(bossHP.HP);
+        UIManager_Game.Instance.ChangeBossHP(bossHP.HP);
     }
     public override void CheckForPattern(float nowBossHP)
     {

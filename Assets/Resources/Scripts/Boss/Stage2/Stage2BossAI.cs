@@ -7,6 +7,10 @@ public class Stage2BossAI : BossAI_Base
     private Stage2BossPattern bossPattern;
     private BossHP bossHP;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
+    private void Awake()
+    {
+        UIManager_Game.Instance.UIReset(150f);
+    }
     void Start()
     {
         bossAttack = GetComponent<Stage2BossShoot>();
@@ -15,7 +19,6 @@ public class Stage2BossAI : BossAI_Base
         bossHP = GetComponent<BossHP>();
         bossHP.enabled = true;
         bossAttack.enabled = true;
-        bossPattern.enabled = false;
         bossMove.enabled = true;
         ResetGame();
     }
@@ -30,7 +33,7 @@ public class Stage2BossAI : BossAI_Base
         bossHP.HP = 150f;
         bossMove.moveSpeed = 120f;
         bossMove.moveRange = 120f;
-        UIManager_Game.Instance.UIReset(bossHP.HP);
+        UIManager_Game.Instance.ChangeBossHP(bossHP.HP);
     }
     public override void CheckForPattern(float nowBossHP)
     {
