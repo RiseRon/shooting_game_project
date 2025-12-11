@@ -4,16 +4,16 @@ public class PlayerBulletMove : MonoBehaviour
 {
     public float damage; // 플레이어 공격력
     public float moveSpeed; // 이동 속도
+    Vector2 direction;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        direction = Vector2.right; // 탄환 발사 방향
     }
 
     // Update is called once per frame
     void Update()
     {
-        Vector2 direction = Vector2.right; // 탄환 발사 방향
         transform.Translate(direction * moveSpeed * Time.deltaTime); // 탄환 움직임
         if(transform.position.x >= 740) // 화면을 넘어가면 제거
         {

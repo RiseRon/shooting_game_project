@@ -8,6 +8,10 @@ public class Stage1BossAI : BossAI_Base
     private BossHP bossHP;
     private int checkTime; // 보스 패턴 사용 횟수
     // Start is called once before the first execution of Update after the MonoBehaviour is created
+    private void Awake()
+    {
+        UIManager_Game.Instance.UIReset(200f);
+    }
     void Start()
     {
         bossAttack = GetComponent<Stage1BossShoot>();
@@ -31,7 +35,7 @@ public class Stage1BossAI : BossAI_Base
         bossHP.HP = 200f;
         bossMove.moveSpeed = 64f;
         bossMove.moveRange = 80f;
-        UIManager_Game.Instance.UIReset(bossHP.HP);
+        UIManager_Game.Instance.ChangeBossHP(bossHP.HP);
     }
     public override void CheckForPattern(float nowBossHP)
     {

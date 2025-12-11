@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.UI;
@@ -64,7 +65,6 @@ public class UIManager_Game : MonoBehaviour
         playerHP.sprite = Resources.Load<Sprite>("Image/Player/HP/Heart_3");
         GameManager.Instance.currentState = GameManager.GameState.Playing;
         bossHPBar.maxValue = bossMaxHP;
-        bossHPBar.value = bossMaxHP;
     }
     public void ChangeBossHP(float change) // 채력 변경 함수
     {
