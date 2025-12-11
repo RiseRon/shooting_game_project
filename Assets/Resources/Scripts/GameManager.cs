@@ -54,6 +54,7 @@ public class GameManager : MonoBehaviour
                 if (!OnOff)
                 {
                     OnOff = true;
+                    UIManager.Instance.ClearStage();
                     SceneManager.LoadScene("Victory");
                 }
                 break;

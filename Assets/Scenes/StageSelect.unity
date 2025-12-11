@@ -1300,6 +1300,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3f9d76d04c24cc4e8b2bca70b104d10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StageSelectUI
+  stageButtons:
+  - {fileID: 1289657070}
+  - {fileID: 1368076485}
+  - {fileID: 402874752}
+  - {fileID: 744457179}
+  lockedSprite: {fileID: 0}
+  originalSprites:
+  - {fileID: 21300000, guid: 1eb3cbdffffd1ec4889ae4f24b4457f1, type: 3}
+  - {fileID: 21300000, guid: 3e320f7a9c44c594291ec8219637c827, type: 3}
+  - {fileID: 21300000, guid: d13d96f4e984ff14da3c39fa9c180d06, type: 3}
+  - {fileID: 21300000, guid: 0c1db0ae1a7ddab4a93057810d12bf94, type: 3}
 --- !u!1001 &1633245612
 PrefabInstance:
   m_ObjectHideFlags: 0
