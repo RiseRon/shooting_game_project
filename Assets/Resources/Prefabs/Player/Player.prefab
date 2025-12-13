@@ -110,6 +110,8 @@ MonoBehaviour:
   specialDamage: 5
   moveSpeed: 600
   specialMoveSpeed: 600
+  attackEffect: {fileID: 5985365582762919561, guid: 7e4d8f9ba363d2d4294d5ba0c124d55a, type: 3}
+  skillEffect: {fileID: 5985365582762919561, guid: 94f0c0475b254cc44a2657cc16595912, type: 3}
   cooldownMask: {fileID: 0}
 --- !u!114 &3473113368288482814
 MonoBehaviour:

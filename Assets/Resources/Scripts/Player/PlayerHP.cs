@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class PlayerHP : MonoBehaviour
 {
-    private int HP = 3; // 채력
+    private int HP = 3; // 체력
     private Sprite[] playerSprite;
     private SpriteRenderer player;
     // Start is called once before the first execution of Update after the MonoBehaviour is created

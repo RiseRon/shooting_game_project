@@ -24,6 +24,9 @@ public class Stage1BossPatternBulletHP : MonoBehaviour
             if (hp > 0)
             {
                 hp -= bulletMove.damage;
+                GameObject newObject = Instantiate(bulletMove.effect, other.transform.position, other.transform.rotation);
+                EffectTime effectTime = newObject.GetComponent<EffectTime>();
+                effectTime.effectTime = 0.1f;
                 Destroy(other.gameObject);
             }
             if (hp <= 0)

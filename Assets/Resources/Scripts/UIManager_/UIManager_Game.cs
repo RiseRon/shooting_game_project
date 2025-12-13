@@ -66,16 +66,16 @@ public class UIManager_Game : MonoBehaviour
         GameManager.Instance.currentState = GameManager.GameState.Playing;
         bossHPBar.maxValue = bossMaxHP;
     }
-    public void ChangeBossHP(float change) // 채력 변경 함수
+    public void ChangeBossHP(float change) // 체력 변경 함수
     {
-        bossHPBar.value = change; // 채력 변경
+        bossHPBar.value = change; // 체력 변경
         if (soundPlayer != null)
             soundPlayer.BossHitSFX();
 
     }
-    public void ChangePlayerHP(int change) // 채력 변경 함수
+    public void ChangePlayerHP(int change) // 체력 변경 함수
     {
-        playerHP.sprite = playerHPImage[change]; // 채력 변경
+        playerHP.sprite = playerHPImage[change]; // 체력 변경
         playerColor.g = 0.5f;
         playerColor.b = 0.5f;
         playerHP.color = playerColor;

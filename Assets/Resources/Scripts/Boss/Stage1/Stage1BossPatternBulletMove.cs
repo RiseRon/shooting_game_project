@@ -9,6 +9,7 @@ public class Stage1BossPatternBulletMove : MonoBehaviour
     private float HealHP = -20;
     private float direction;
     private bool OnOff = true;
+    public GameObject effect;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -63,6 +64,9 @@ public class Stage1BossPatternBulletMove : MonoBehaviour
                 bossPattern.PatternEndCheck();
                 BossHP bossHP = other.GetComponent<BossHP>();
                 bossHP.TakeDamage(HealHP);
+                GameObject newObject = Instantiate(effect, other.transform.position, other.transform.rotation);
+                EffectTime effectTime = newObject.GetComponent<EffectTime>();
+                effectTime.effectTime = 0.5f;
                 Destroy(gameObject);
             }
         }

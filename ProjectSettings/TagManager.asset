@@ -10,6 +10,7 @@ TagManager:
   - BossHP
   - BossBullet
   - PlayerHP
+  - Effect
   layers:
   - Default
   - TransparentFX
@@ -55,6 +56,9 @@ TagManager:
     locked: 0
   - name: Bullet
     uniqueID: 3073942015
+    locked: 0
+  - name: Effect
+    uniqueID: 2288024021
     locked: 0
   m_RenderingLayers:
   - Default

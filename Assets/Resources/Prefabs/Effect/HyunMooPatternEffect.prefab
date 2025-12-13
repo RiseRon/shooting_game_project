@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1527929122789266846
+--- !u!1 &2836311542626522471
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,40 +8,39 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2418614595787503518}
-  - component: {fileID: 2388484380258468028}
-  - component: {fileID: -3739002175260638201}
-  - component: {fileID: 681646719475161318}
-  - component: {fileID: -9200947414926370787}
-  m_Layer: 9
-  m_Name: PatternBullet
-  m_TagString: Boss
+  - component: {fileID: 7403378381639885872}
+  - component: {fileID: 882205828438763083}
+  - component: {fileID: 5214171816265517755}
+  - component: {fileID: -8880423865647122117}
+  m_Layer: 0
+  m_Name: HyunMooPatternEffect
+  m_TagString: Effect
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2418614595787503518
+--- !u!4 &7403378381639885872
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1527929122789266846}
+  m_GameObject: {fileID: 2836311542626522471}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 150, y: 150, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &2388484380258468028
+--- !u!212 &882205828438763083
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1527929122789266846}
+  m_GameObject: {fileID: 2836311542626522471}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -76,81 +75,52 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1221025281
-  m_SortingLayer: 3
+  m_SortingLayerID: -2006943275
+  m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: 260850317354330500, guid: b44b55bbc86a53e41999b54fa4684013, type: 3}
+  m_Sprite: {fileID: 8053899242462091416, guid: cc80ed7739134a446b3ee3a9ad185e89, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 0.8828125}
+  m_Size: {x: 6.37, y: 6.37}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &-3739002175260638201
-CircleCollider2D:
+--- !u!95 &5214171816265517755
+Animator:
+  serializedVersion: 7
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1527929122789266846}
+  m_GameObject: {fileID: 2836311542626522471}
   m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Radius: 48
---- !u!114 &681646719475161318
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ca07f296d5ac4c546b1553f3d936d325, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &-8880423865647122117
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1527929122789266846}
+  m_GameObject: {fileID: 2836311542626522471}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d24bec9a8777f3647a96911c6f83af21, type: 3}
+  m_Script: {fileID: 11500000, guid: 99e5536575b2d6e48a896eea9f67bff6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0
-  targetPoint: {x: 0, y: 0}
-  effect: {fileID: 2836311542626522471, guid: 8177f98cef70adb41b95690dd5a2b64c, type: 3}
---- !u!114 &-9200947414926370787
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1527929122789266846}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab45a050c9247e143927e82f6f9a73b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PetternBulletHP
-  hp: 0
+  effectTime: 0

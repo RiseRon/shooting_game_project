@@ -1,3 +1,4 @@
+using Unity.Burst.CompilerServices;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
@@ -18,6 +19,8 @@ public class PlayerShoot : MonoBehaviour
     private float nextShootTime = 0f; // 다음 발사 시간
     private float specialCooldownTime = 10f; // 특수 스킬 발사 쿨타임
     private float nextSpecialShootTime = 0f; // 다음 특수 스킬 시간
+    public GameObject attackEffect;
+    public GameObject skillEffect;
 
     public Image cooldownMask;
 
@@ -53,6 +56,7 @@ public class PlayerShoot : MonoBehaviour
             PlayerBulletMove bulletMove = newObject.GetComponent<PlayerBulletMove>();
             bulletMove.damage = damage; // 공격력 설정
             bulletMove.moveSpeed = moveSpeed; // 이동속도 설정
+            bulletMove.effect = attackEffect; // 이펙트 설정
             if (soundPlayer != null)
                 soundPlayer.PlayerAttackSFX();
         }
@@ -70,6 +74,7 @@ public class PlayerShoot : MonoBehaviour
             PlayerBulletMove bulletMove = newObject.GetComponent<PlayerBulletMove>();
             bulletMove.damage = specialDamage; // 공격력 설정
             bulletMove.moveSpeed = moveSpeed; // 이동속도 설정
+            bulletMove.effect = skillEffect; // 이펙트 설정
             if (soundPlayer != null)
                 soundPlayer.PlayerSkillSFX();
             

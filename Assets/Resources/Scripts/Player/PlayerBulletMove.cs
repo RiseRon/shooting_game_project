@@ -4,6 +4,7 @@ public class PlayerBulletMove : MonoBehaviour
 {
     public float damage; // 플레이어 공격력
     public float moveSpeed; // 이동 속도
+    public GameObject effect;
     Vector2 direction;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -27,6 +28,9 @@ public class PlayerBulletMove : MonoBehaviour
             BossHP bossHealth = other.GetComponent<BossHP>();
             if (bossHealth != null)
             {
+                GameObject newObject = Instantiate(effect, transform.position, transform.rotation);
+                EffectTime effectTime = newObject.GetComponent<EffectTime>();
+                effectTime.effectTime = 0.1f;
                 bossHealth.TakeDamage(damage);
             }
             Destroy(gameObject); // 탄환 제거
