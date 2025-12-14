@@ -18,7 +18,7 @@ public class Stage4PatternLightDamage : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Palayer"))
+        if (other.CompareTag("Player"))
         {
             UIManager_Game.Instance.ChangePlayerHP(0);
             GameManager.Instance.currentState = GameManager.GameState.GameOver;

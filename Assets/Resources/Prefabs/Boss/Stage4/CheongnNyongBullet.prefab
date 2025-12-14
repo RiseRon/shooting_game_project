@@ -78,12 +78,12 @@ SpriteRenderer:
   m_SortingLayerID: -1221025281
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 3224569226643497554, guid: c37eaf9bb4a98084fbdaa99ac506b53c, type: 3}
+  m_Sprite: {fileID: 2859093309546010739, guid: fcc747cd5bac0e1499ec0ede39a6051a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 56.296295, y: 60.740738}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -138,3 +138,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Stage3BossBulletMove
   moveSpeed: 900
+  bossEffect: {fileID: 6423310159271200999, guid: d9c5cb1fa081df8458490a18e900697e, type: 3}

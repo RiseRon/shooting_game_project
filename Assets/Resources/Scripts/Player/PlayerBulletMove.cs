@@ -30,7 +30,7 @@ public class PlayerBulletMove : MonoBehaviour
             {
                 GameObject newObject = Instantiate(effect, transform.position, transform.rotation);
                 EffectTime effectTime = newObject.GetComponent<EffectTime>();
-                effectTime.effectTime = 0.1f;
+                effectTime.effectTime = 0.2f;
                 bossHealth.TakeDamage(damage);
             }
             Destroy(gameObject); // ÅºÈ¯ Á¦°Å

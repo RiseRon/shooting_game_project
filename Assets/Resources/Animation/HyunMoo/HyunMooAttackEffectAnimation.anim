@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: JuJakAnimation
+  m_Name: HyunMooAttackEffectAnimation
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -21,11 +21,11 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: -7359778088838615045, guid: 088b4d1314ba60342a40b6d107c0e1c1, type: 3}
+      value: {fileID: 1679911268130306768, guid: 7134d32bcd9eff24396ad868b9b93860, type: 3}
     - time: 0.083333336
-      value: {fileID: -5139578932174121296, guid: 8bdf0882e83c7d442bc79591c52c561f, type: 3}
+      value: {fileID: -2489356488066646899, guid: 7d30354b1ffc5be46863bdcf0882ead7, type: 3}
     - time: 0.16666667
-      value: {fileID: 3563935748030878001, guid: 2609b2d6158fd6949b0fbe248b4b4560, type: 3}
+      value: {fileID: -427960451412968228, guid: 498f9c163d7e18e40b6f4e05585b32b5, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -48,9 +48,9 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: -7359778088838615045, guid: 088b4d1314ba60342a40b6d107c0e1c1, type: 3}
-    - {fileID: -5139578932174121296, guid: 8bdf0882e83c7d442bc79591c52c561f, type: 3}
-    - {fileID: 3563935748030878001, guid: 2609b2d6158fd6949b0fbe248b4b4560, type: 3}
+    - {fileID: 1679911268130306768, guid: 7134d32bcd9eff24396ad868b9b93860, type: 3}
+    - {fileID: -2489356488066646899, guid: 7d30354b1ffc5be46863bdcf0882ead7, type: 3}
+    - {fileID: -427960451412968228, guid: 498f9c163d7e18e40b6f4e05585b32b5, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
