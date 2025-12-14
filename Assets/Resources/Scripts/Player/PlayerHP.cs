@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.UI;
 
 public class PlayerHP : MonoBehaviour
@@ -22,22 +23,18 @@ public class PlayerHP : MonoBehaviour
     {
 
     }
-    private void OnTriggerEnter2D(Collider2D other)
+    public void TakeDamage()
     {
-        if (other.CompareTag("BossBullet"))
+        if (HP > 0)
         {
-            if (HP > 0)
-            {
-                HP--;
-                UIManager_Game.Instance.ChangePlayerHP(HP);
-                player.sprite = playerSprite[1];
-                Invoke("PlayerDamaged", 0.3f);
-                Destroy(other.gameObject);
-            }
-            if (HP <= 0)
-            {
-                GameManager.Instance.currentState = GameManager.GameState.GameOver;
-            }
+            HP--;
+            UIManager_Game.Instance.ChangePlayerHP(HP);
+            player.sprite = playerSprite[1];
+            Invoke("PlayerDamaged", 0.3f);
+        }
+        if (HP <= 0)
+        {
+            GameManager.Instance.currentState = GameManager.GameState.GameOver;
         }
     }
     private void PlayerDamaged()
