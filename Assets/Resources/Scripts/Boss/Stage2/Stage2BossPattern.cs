@@ -3,6 +3,7 @@ using UnityEngine;
 public class Stage2BossPattern : MonoBehaviour
 {
     private Stage2BossShoot bossShoot;
+
     private SoundPlayer soundPlayer;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
