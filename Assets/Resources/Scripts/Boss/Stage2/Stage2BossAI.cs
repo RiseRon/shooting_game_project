@@ -6,10 +6,15 @@ public class Stage2BossAI : BossAI_Base
     private BossMove bossMove;
     private Stage2BossPattern bossPattern;
     private BossHP bossHP;
+
+    private SoundPlayer soundPlayer;
+
+    bool OnOff = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Awake()
     {
         UIManager_Game.Instance.UIReset(150f);
+        soundPlayer = FindFirstObjectByType<SoundPlayer>();
     }
     void Start()
     {
@@ -37,6 +42,12 @@ public class Stage2BossAI : BossAI_Base
     }
     public override void CheckForPattern(float nowBossHP)
     {
+        if (nowBossHP <= 100 && OnOff ==  false)
+        {
+            if (soundPlayer != null)
+                soundPlayer.BossSkill_1SFX();
+            OnOff = true;
+        }
         if ( nowBossHP <= 100 )
         {
             bossPattern.PatternStart();

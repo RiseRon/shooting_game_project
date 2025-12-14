@@ -19,10 +19,6 @@ public class Stage2BossPattern : MonoBehaviour
     }
     public void PatternStart()
     {
-        if (soundPlayer != null)
-        {
-            soundPlayer.BossSkill_1SFX();
-        }
         bossShoot.cooldownTime = 0.5f;
         bossShoot.moveSpeed = 900f;
     }

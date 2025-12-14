@@ -798,6 +798,10 @@ PrefabInstance:
       propertyPath: cooldownMask
       value: 
       objectReference: {fileID: 839291577}
+    - target: {fileID: 6155837624347312354, guid: 419c96c5386cc214d9e90e34f42649f5, type: 3}
+      propertyPath: specialDamage
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 8665028916071430317, guid: 419c96c5386cc214d9e90e34f42649f5, type: 3}
       propertyPath: m_Name
       value: Player
