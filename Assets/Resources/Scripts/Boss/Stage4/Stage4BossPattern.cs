@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class Stage4BossPattern : MonoBehaviour
 {
@@ -9,10 +10,13 @@ public class Stage4BossPattern : MonoBehaviour
     private bool OnOff;
     private Stage4BossAI bossAI;
     private Animator animator;
+
+    private SoundPlayer soundPlayer;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         bossAI = GetComponent<Stage4BossAI>();
+        soundPlayer = FindFirstObjectByType<SoundPlayer>();
         animator = GetComponent<Animator>();
         animator.speed = 1.5f;
     }
@@ -48,6 +52,10 @@ public class Stage4BossPattern : MonoBehaviour
             position.y *= -1;
         }
         animator.SetTrigger("Return");
+        if (soundPlayer != null)
+        {
+            soundPlayer.BossSkill_1SFX();
+        }
     }
     public void PatternNext()
     {
@@ -59,5 +67,9 @@ public class Stage4BossPattern : MonoBehaviour
             position.x += 350;
         }
         animator.SetTrigger("Return");
+        if (soundPlayer != null)
+        {
+            soundPlayer.BossSkill_1SFX();
+        }
     }
 }

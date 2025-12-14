@@ -9,11 +9,14 @@ public class Stage1BossPattern : MonoBehaviour
     private int endCheck;
     private Animator animator;
     private Collider2D collider2;
+
+    private SoundPlayer soundPlayer;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         animator = GetComponent<Animator>();
         collider2 = GetComponent<Collider2D>();
+        soundPlayer = FindFirstObjectByType<SoundPlayer>();
     }
 
     // Update is called once per frame
@@ -57,6 +60,10 @@ public class Stage1BossPattern : MonoBehaviour
         endCheck--;
         if (endCheck == 0)
         {
+            if (soundPlayer != null)
+            {
+                soundPlayer.BossSkill_1SFX();
+            }
             collider2.offset = new Vector2 (-50, 0);
             Stage1BossAI bossAI = GetComponent<Stage1BossAI>();
             animator.SetTrigger("Return");
