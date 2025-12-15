@@ -5,7 +5,7 @@ public class UIManager : MonoBehaviour
 {
     public static UIManager Instance;
 
-    private int selectedStage = 0;
+    public int selectedStage = 0;
     private int lastSelectedStage = 0;
         
     public int clearedStage = 0;

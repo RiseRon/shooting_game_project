@@ -405,7 +405,7 @@ MonoBehaviour:
     m_FadeDuration: 0.1
   m_SpriteState:
     m_HighlightedSprite: {fileID: 21300000, guid: b61637e153a2ee14db33db1acdd19556, type: 3}
-    m_PressedSprite: {fileID: 21300000, guid: b61637e153a2ee14db33db1acdd19556, type: 3}
+    m_PressedSprite: {fileID: 0}
     m_SelectedSprite: {fileID: 21300000, guid: a63ea6b50fffb9d419bd0f07c221b304, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
@@ -669,7 +669,7 @@ MonoBehaviour:
     m_FadeDuration: 0.1
   m_SpriteState:
     m_HighlightedSprite: {fileID: 21300000, guid: 4d3eb181c14f83a4696c2cb089a1ff0a, type: 3}
-    m_PressedSprite: {fileID: 21300000, guid: 4d3eb181c14f83a4696c2cb089a1ff0a, type: 3}
+    m_PressedSprite: {fileID: 0}
     m_SelectedSprite: {fileID: 21300000, guid: f81fa81733936cd4987c3118a968d8f7, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
@@ -954,7 +954,7 @@ MonoBehaviour:
     m_FadeDuration: 0.1
   m_SpriteState:
     m_HighlightedSprite: {fileID: 21300000, guid: ef6613340d47f1b41a4436d1fa423c64, type: 3}
-    m_PressedSprite: {fileID: 21300000, guid: ef6613340d47f1b41a4436d1fa423c64, type: 3}
+    m_PressedSprite: {fileID: 0}
     m_SelectedSprite: {fileID: 21300000, guid: 3476f23e7ead7694b9b3efcbe607118d, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
@@ -1086,7 +1086,7 @@ MonoBehaviour:
     m_FadeDuration: 0.1
   m_SpriteState:
     m_HighlightedSprite: {fileID: 21300000, guid: 498f1bd7de4b1714f975ffd8c002dcb3, type: 3}
-    m_PressedSprite: {fileID: 21300000, guid: 498f1bd7de4b1714f975ffd8c002dcb3, type: 3}
+    m_PressedSprite: {fileID: 0}
     m_SelectedSprite: {fileID: 21300000, guid: 4aff51c266b044a4d891c37a027e5866, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
@@ -1311,6 +1311,11 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 3e320f7a9c44c594291ec8219637c827, type: 3}
   - {fileID: 21300000, guid: d13d96f4e984ff14da3c39fa9c180d06, type: 3}
   - {fileID: 21300000, guid: 0c1db0ae1a7ddab4a93057810d12bf94, type: 3}
+  selectedBossSprites:
+  - {fileID: 21300000, guid: 3476f23e7ead7694b9b3efcbe607118d, type: 3}
+  - {fileID: 21300000, guid: 4aff51c266b044a4d891c37a027e5866, type: 3}
+  - {fileID: 21300000, guid: a63ea6b50fffb9d419bd0f07c221b304, type: 3}
+  - {fileID: 21300000, guid: f81fa81733936cd4987c3118a968d8f7, type: 3}
 --- !u!1001 &1633245612
 PrefabInstance:
   m_ObjectHideFlags: 0

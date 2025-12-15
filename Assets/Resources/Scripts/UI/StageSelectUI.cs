@@ -12,8 +12,8 @@ public class StageSelectUI : MonoBehaviour
     public Sprite lockedSprite; // 잠겨있을 때 보여줄 이미지
 
     public Sprite[] originalSprites; // 원본 이미지 저장용 배열
+    public Sprite[] selectedBossSprites; // 선택 이미지 저장용 배열
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         uiManager = FindFirstObjectByType<UIManager>();
@@ -42,6 +42,7 @@ public class StageSelectUI : MonoBehaviour
         }
 
         int clearedStage = uiManager.clearedStage;
+        int currentSelectedStage = uiManager.selectedStage;
 
         for (int i = 0; i < stageButtons.Length; i++)
         {
@@ -51,8 +52,14 @@ public class StageSelectUI : MonoBehaviour
             {
                 // 잠금 해제
                 stageButtons[i].interactable = true;
-                if (originalSprites[i] != null)
-                    stageButtons[i].image.sprite = originalSprites[i];
+
+                if (stageNumber == currentSelectedStage)
+                {
+                    if ( i < selectedBossSprites.Length && selectedBossSprites[i] != null)
+                    {
+                        stageButtons[i].image.sprite = selectedBossSprites[i];
+                    }
+                }
             }
             else
             {
@@ -69,6 +76,8 @@ public class StageSelectUI : MonoBehaviour
         if (uiManager != null)
         {
             uiManager.SelectStage(selectIndex);
+
+            UpdateStageLockState();
         }
         if (soundPlayer != null)
         {
